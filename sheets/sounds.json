@@ -1,0 +1,2730 @@
+{
+ "sheet": "sounds",
+ "note": "Every Pizza Tower sound effect event. plays: Mania WAV under Data/SoundFX, or mute, or keep (the game's own). Music events are never touched.",
+ "columns": [
+  "event",
+  "plays",
+  "reason",
+  "rings"
+ ],
+ "rows": [
+  {
+   "event": "event:/sfx/antigrav/bump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/antigrav/end",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/antigrav/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/barrel/bump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/barrel/slide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/barrel/slope",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/barrel/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/boxxed/flap",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/boxxed/spin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/boxxed/step",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/cheese/ball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/cheese/ground",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/cheese/jump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/cheese/step",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ending/johnending",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ending/star",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ending/towercollapse",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ending/towercollapsetrack",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/alarm",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/axethrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/badrat",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/banditochicken",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/batwing",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/burp",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/cannongoblin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/charge",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/cloneattack",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/comingoutground",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/coughing",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/demoncharge",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/demonsuprise",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/escapespawn",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/fakesanta",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/hamkuffgrab",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/homing",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/johndead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/johnghost",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/jumpscare",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/kill",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/killingblow",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/minijohnpunch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/ninjakicks",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/noisegoblinbow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/pickledance",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/piranha",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/pizzardelectricity",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/presentfall",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/projectile",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/rancherpistol",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/robotslapsteam",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/stomp",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/treasureguy",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/tribaldance",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/enemies/ufolivelaser",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/bodyslam",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/chase",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/chasebegin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/deform",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/flailing",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/grab",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/headoff",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/headthrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/jump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/mach",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/reform",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/step",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/superjump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/superjumpclonerelease",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/fakepep/taunt",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/firemouth/dash",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/firemouth/jump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/firemouth/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/hub/gusbrickfightball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/hub/gusrun",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/intro/pepgustavointro",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/kingghost/loop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/kingghost/move",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/knight/down",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/knight/lose",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/knight/slide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/knight/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/knight/thunder",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/balloonpop",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/beerbreak",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/beerhit",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bellcollect",
+   "plays": "Global/Ring",
+   "reason": "mania",
+   "rings": 1
+  },
+  {
+   "event": "event:/sfx/misc/bellcollectbig",
+   "plays": "Global/HyperRing",
+   "reason": "mania",
+   "rings": 10
+  },
+  {
+   "event": "event:/sfx/misc/blackoutpunch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bossbeaten",
+   "plays": "Global/SignPost",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bossdefeattonk",
+   "plays": "Stage/BossHit",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bosskey",
+   "plays": "Global/SpecialRing",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bossvulnerable",
+   "plays": "Stage/Beep",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bottlepop",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakblock",
+   "plays": "Stage/LedgeBreak",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakdance",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakdancemusic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakice",
+   "plays": "Stage/LedgeBreak",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakicebig",
+   "plays": "Stage/LedgeBreak3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/breakmetal",
+   "plays": "Stage/LedgeBreak3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/bubblestation",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/captaingoblincrosshair",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/captaingoblinshoot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/cardcollect",
+   "plays": "Global/Ring",
+   "reason": "mania",
+   "rings": 1
+  },
+  {
+   "event": "event:/sfx/misc/cardflip",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/checkpoint",
+   "plays": "Global/Starpost",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/cheers",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/clotheswitch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/collect",
+   "plays": "Global/Ring",
+   "reason": "mania",
+   "rings": 1
+  },
+  {
+   "event": "event:/sfx/misc/collectgiantpizza",
+   "plays": "Global/HyperRing",
+   "reason": "mania",
+   "rings": 50
+  },
+  {
+   "event": "event:/sfx/misc/collectpizza",
+   "plays": "Global/Ring",
+   "reason": "mania",
+   "rings": 10
+  },
+  {
+   "event": "event:/sfx/misc/collecttoppin",
+   "plays": "Global/SpecialRing",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/computerswitch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/cow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/cowkick",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/cross",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/dashpad",
+   "plays": "Global/Release",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/detransfo",
+   "plays": "Global/Teleport",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/door",
+   "plays": "Stage/Clack",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/elevatorsqueak",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/elevatorstart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/escaperumble",
+   "plays": "Stage/Rumble",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/explosion",
+   "plays": "Stage/Explosion2",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/foundtreasure",
+   "plays": "Global/SpecialRing",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/galloping",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/gaterise",
+   "plays": "Stage/Rumble",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/golfbump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/golfjingle",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/golfpunch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/halloweenpumpkin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/hamkuff",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/honkhonk",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/instanttemp",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/kashing",
+   "plays": "Global/ScoreAdd",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/kashingcombo",
+   "plays": "Global/ScoreTotal",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/keyunlock",
+   "plays": "Stage/Button",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/lap2start",
+   "plays": "Global/SpecialWarp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/lapenter",
+   "plays": "Global/Warp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/loserace",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/mine",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/mrpinch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/mrstickhat",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/mushroombounce",
+   "plays": "Global/Spring",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/pepbotkick",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/pepgusswitch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/pillarmusic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/piranhabite",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/policesiren",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/racestart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/rockbreak",
+   "plays": "Stage/LedgeBreak3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/secretenter",
+   "plays": "Global/Warp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/secretexit",
+   "plays": "Global/Warp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/secretfound",
+   "plays": "Global/SpecialWarp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/sniff",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/sniffbump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/spaceship",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/superspring",
+   "plays": "Global/Spring",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/switchend",
+   "plays": "Stage/Clack",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/switchstart",
+   "plays": "Stage/Button",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/taxibeep",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/taximove",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/teleporterend",
+   "plays": "Global/Teleport",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/teleporterstart",
+   "plays": "Global/Teleport",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/thundercloud",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/timerbegin",
+   "plays": "Stage/Warning",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/timercount",
+   "plays": "Stage/Beep",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/timerend",
+   "plays": "Stage/Warning",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/toppingot",
+   "plays": "Global/SpecialRing",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/toppinhelp",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/transfo",
+   "plays": "Stage/Transform",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/trashjump1",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/trashjump2",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/ufo",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/ventilator",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/versusscreen",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/waterslide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/waterslidesplash",
+   "plays": "Stage/Splash",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/watersplash",
+   "plays": "Stage/Splash",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/windloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/misc/winrace",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/monsters/cheeseloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/monsters/puppetfly",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/monsters/robotstep",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/monsters/sausagestep",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/cube",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/doublejump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/down",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/hook",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/mortdead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/mortpickup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/mortslap",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/side",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/throw",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/throwcatch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/throwloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/mort/up",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/balloon",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/bombbounce",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/droptrap",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/fightball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/giantballoon1",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/giantballoon2",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/jetpackloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/jetpackspin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/jetpackstart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/machslide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/noisecrusher",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/pogo",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/skatealone",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/skateloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/skatestart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/skateturn",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/spin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noise/woag",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noisette/collect",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noisette/kiss",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noisette/voice1",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/noisette/voice2",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/animatronic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/backslide",
+   "plays": "Global/Skidding",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/bombbounce",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/bombfuse",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/box",
+   "plays": "Stage/LedgeBreak",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/break",
+   "plays": "Stage/LedgeBreak",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/bump",
+   "plays": "Stage/Impact3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/bumpwall",
+   "plays": "Stage/Impact3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/burn",
+   "plays": "Global/FireShield",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/cheesefloor",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/cheesejump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/cross",
+   "plays": "Global/Twinkle",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/crouchslide",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/dive",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/fireass",
+   "plays": "Global/FireDash",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/freefall",
+   "plays": "mute",
+   "reason": "ground-pound-plays-drop-dash-charge-once-at-the-start",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/ghostintro",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/ghostspeed",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/gotsupertaunt",
+   "plays": "Global/HyperRing",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/grabcancel",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/gravecorpse",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/gravecorpsestart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/groundpound",
+   "plays": "Stage/Impact4",
+   "reason": "mania-others-pounds-sonics-own-landing-is-land_sound-in-moves",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/hitwall",
+   "plays": "Stage/Impact3",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/hurt",
+   "plays": "Global/Hurt",
+   "reason": "mania-with-no-rings-with-rings-plays-Global/LoseRings-instead",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/jetpackjump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/johnghost",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/jump",
+   "plays": "Global/Jump",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/mach",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/mach2bump",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/machroll",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/machslideboost",
+   "plays": "Global/Release",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/parry",
+   "plays": "Global/InstaShield",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/pistolshot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/pistolstart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/pizzapepper",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/pray",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/punch",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/rampjump",
+   "plays": "Global/Jump",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/revolverbigshot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/revolvercharge",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/rollgetup",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/screamboss",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/shotgunload",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/shotgunshot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/slip",
+   "plays": "Global/Skidding",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/slipbump",
+   "plays": "Stage/Impact2",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/slipend",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/spin",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/splat",
+   "plays": "Stage/Impact2",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/step",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/stepinshit",
+   "plays": "mute",
+   "reason": "peppino-sound-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/superjump",
+   "plays": "Global/Flying",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/superjumpcancel",
+   "plays": "Global/Release",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/supertaunt",
+   "plays": "Global/SpecialWarp",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/suplexdash",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/taunt",
+   "plays": "Global/Twinkle",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/tumble",
+   "plays": "Global/Roll",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pep/uppercut",
+   "plays": "Global/Destroy",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/artdude",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/groundpound",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/groundpoundbump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/groundpoundjump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/knightappear",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/knightslide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/shoulderbash",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/shrink",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/statueappear",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/statuedestroy",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pepperman/turn",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pipe/bump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pipe/end",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pipe/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/jump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/laugh",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/moving",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/open",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/ram",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/shower",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzaface/spit",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/beatdown",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/bigpunch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/bigpunchstart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/cog",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/finale",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/finaleexplosion",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/fishing",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/giantstomp",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/grablevel",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/haywire",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/jump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/medievalbringup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/medievalprojectile",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/ratball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/recover",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/spin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/step",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/swinging",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/swingstart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/throw",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/thunder",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/tvbounce",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/tvthrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/pizzahead/uzi",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/airspin",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/animatronic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/balloonflap",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/bombthrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/bossdeath",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/break",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/bucket",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/divebomb",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/doiserock",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/doublejump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/fightball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finale_explosion",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finale_outbomb",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finale_pizzahead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finaljudgement_drumroll",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finaljudgement_start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/finaljudgement_verdict",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/fireball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/firemouthjump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/freezerintro",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/ghostdash",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/giantbombthrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/horseydead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/lionscream",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/mach",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/machslide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/minigunloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/minigunshot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/minijetpack",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/piggrab",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/pigthrow",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/punch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/rushdownend",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/rushdownhit",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/rushdownloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/superjump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/superjumprelease",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/supernoiseeffect",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/supernoisescream",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/titlecard",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/wallbounce",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/playern/wallbounceland",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/deflate",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/deflateeat",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/grab",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/grabeat",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/ratbowling",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/ratdead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/rat/ratsniff",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/ball",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/groundpound",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/mach",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/punch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/walljump1",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ratmount/walljump2",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/angelmove",
+   "plays": "Global/MenuBleep",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/back",
+   "plays": "Global/MenuWoosh",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/bombfuse",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/comboup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/fileselect",
+   "plays": "Global/MenuAccept",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/fileselectn",
+   "plays": "Global/MenuAccept",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/lightswitch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/menuexplosions",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/noiseselect",
+   "plays": "Global/MenuAccept",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/pepselect",
+   "plays": "Global/MenuAccept",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/percentagemove",
+   "plays": "Global/MenuBleep",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/rankdown",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/rankup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/select",
+   "plays": "Global/MenuAccept",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/slidermusic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/slidersfx",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/slidersfxmaster",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/step",
+   "plays": "Global/MenuBleep",
+   "reason": "mania",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/switchchardown",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/switchcharup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/tvstatic",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/tvswitch",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/tvswitchback",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/wartimer",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/ui/wartimerup",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/bazookashoot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/bazookatrail",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/cowdead",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/cowstomp",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/finalshot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/flamestart",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/flamethrower",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/ghostloop",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/mach1",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/order",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/slide",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/throw",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/uzijump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/uziprep",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/vigilante/uzishoot",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/brickok",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/enemyrarescream",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/fakepepnegative",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/fakepeppositive",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/fakepepscream",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/geromegot",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/gushurt",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/gusok",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/hurt",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/mrstick",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/mrsticklaugh",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/muffledscream",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/myea",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/noisenegative",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/noisepositive",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/noisescream",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/ok",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/outtransfo",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/peppermanlaugh",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/peppermanscared",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/peppermansnicker",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/peppinoangryscream",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/peppinoangryscream2",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/pepwakeup",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/pig",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/pigphoto",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/pizzagranny",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/pizzahead",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/swap",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/transfo",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/vigiangry",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/vigiduel",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/vigiintro",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/woag",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/voice/yodeling",
+   "plays": "mute",
+   "reason": "peppino-voice-removed",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/weenie/bump",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  },
+  {
+   "event": "event:/sfx/weenie/start",
+   "plays": "keep",
+   "reason": "no-mania-match-keeps-pizza-tower",
+   "rings": 0
+  }
+ ]
+}

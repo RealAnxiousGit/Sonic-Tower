@@ -1,0 +1,151 @@
+{
+ "sheet": "test_checks",
+ "note": "What test mode reports. Each name is what the bot really checks in the running game. melty: 1 when the recipe's test.checks lists it (at most 12); the rest stay in the local check file.",
+ "columns": [
+  "name",
+  "proves",
+  "melty"
+ ],
+ "rows": [
+  {
+   "name": "mania-sprites-read",
+   "proves": "Sonic's sprites loaded from the player's own Data.rsdk",
+   "melty": 1
+  },
+  {
+   "name": "mania-sfx-read",
+   "proves": "Mania's sounds loaded from the player's own Data.rsdk",
+   "melty": 0
+  },
+  {
+   "name": "level-entered",
+   "proves": "a real Pizza Tower level is running with Sonic in it",
+   "melty": 1
+  },
+  {
+   "name": "pizza-tower-music",
+   "proves": "Pizza Tower's music is playing in the level",
+   "melty": 1
+  },
+  {
+   "name": "momentum",
+   "proves": "Sonic builds speed from Mania's acceleration",
+   "melty": 1
+  },
+  {
+   "name": "spindash-breaks-block",
+   "proves": "a spindash breaks a Pizza Tower block",
+   "melty": 1
+  },
+  {
+   "name": "spindash-dust",
+   "proves": "Mania's spindash dust was drawn while revving",
+   "melty": 0
+  },
+  {
+   "name": "spindash-kills-enemy",
+   "proves": "a spindash kills a Pizza Tower enemy",
+   "melty": 1
+  },
+  {
+   "name": "combo-ticks",
+   "proves": "that kill raises Pizza Tower's combo with its timer running",
+   "melty": 1
+  },
+  {
+   "name": "taunt-poses",
+   "proves": "taunting shows more than one Sonic pose",
+   "melty": 1
+  },
+  {
+   "name": "mania-sfx-plays",
+   "proves": "a Mania sound is really advancing in the game's audio mixer",
+   "melty": 1
+  },
+  {
+   "name": "hit-sound-rings",
+   "proves": "a hit with rings plays Mania's ring-loss sound",
+   "melty": 0
+  },
+  {
+   "name": "hit-sound-no-rings",
+   "proves": "a hit with no rings plays Mania's hurt sound",
+   "melty": 0
+  },
+  {
+   "name": "ground-pound-sound",
+   "proves": "the ground pound starts with the drop dash charge sound",
+   "melty": 0
+  },
+  {
+   "name": "ground-pound-land-sound",
+   "proves": "the ground pound lands with the drop dash release sound",
+   "melty": 0
+  },
+  {
+   "name": "door-goes-through",
+   "proves": "standing at a real door and pressing up takes Sonic to the next room",
+   "melty": 1
+  },
+  {
+   "name": "door-arrival-control",
+   "proves": "Sonic can move after coming out of that door",
+   "melty": 0
+  },
+  {
+   "name": "hallway-goes-through",
+   "proves": "running into a real hallway takes Sonic to the next room",
+   "melty": 0
+  },
+  {
+   "name": "hallway-arrival-control",
+   "proves": "Sonic can move after that hallway",
+   "melty": 0
+  },
+  {
+   "name": "box-goes-through",
+   "proves": "standing on a real pizza box and pressing down takes Sonic through it",
+   "melty": 0
+  },
+  {
+   "name": "box-arrival-control",
+   "proves": "Sonic can move after coming out of that box",
+   "melty": 0
+  },
+  {
+   "name": "gate-enters-level",
+   "proves": "a real level gate in the tower takes Sonic into its level",
+   "melty": 0
+  },
+  {
+   "name": "door-animation",
+   "proves": "Sonic looks up and fades into a door, then walks out of the next one",
+   "melty": 0
+  },
+  {
+   "name": "ladder-grabs",
+   "proves": "pressing up at a real ladder takes hold of it",
+   "melty": 0
+  },
+  {
+   "name": "super-jump",
+   "proves": "up + jump charges and launches the game's super jump as Sonic",
+   "melty": 0
+  },
+  {
+   "name": "spindash-starts-pizza-time",
+   "proves": "a spindash into the level's pillar starts Pizza Time",
+   "melty": 1
+  },
+  {
+   "name": "exit-gate-ends-level",
+   "proves": "pressing up at the exit gate during Pizza Time finishes the level",
+   "melty": 1
+  },
+  {"name": "results-shows-sonic", "proves": "the rank wrapper drew Sonic for every rank from D to P", "melty": 0},
+  {"name": "menu-shows-sonic", "proves": "the file select drew Sonic in Peppino's place", "melty": 0},
+  {"name": "sweep-rooms", "proves": "every room on the sweep list, bosses included, opened without crashing", "melty": 0},
+  {"name": "text-follows-character", "proves": "the game's words name the player's character and teach these characters' moves", "melty": 0},
+  {"name": "air-ability", "proves": "jumping again in the air starts the character's own ability", "melty": 0}
+ ]
+}

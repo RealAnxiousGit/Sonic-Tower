@@ -1,0 +1,308 @@
+{
+ "sprites": [
+  "Balance 1",
+  "Balance 2",
+  "Bored 1",
+  "Bored 2",
+  "Breathe",
+  "Cling",
+  "Crouch",
+  "Dash",
+  "Die",
+  "Dropdash",
+  "Fan",
+  "Fly",
+  "Hang",
+  "Hang Move",
+  "Hurt",
+  "Idle",
+  "Jog",
+  "Jump",
+  "Look Up",
+  "Outta Here",
+  "Pole Swing V",
+  "Push",
+  "Ride",
+  "Run",
+  "Shimmy Move",
+  "Skid",
+  "Skid Turn",
+  "Spindash",
+  "Spiral Run",
+  "Spring CS",
+  "Spring Diagonal",
+  "Spring Twirl",
+  "Stand CS",
+  "Transform",
+  "Turntable",
+  "Twister",
+  "Victory",
+  "Walk"
+ ],
+ "sfx": [
+  {
+   "name": "Global/Charge",
+   "file": "Data/SoundFX/Global/Charge.wav"
+  },
+  {
+   "name": "Global/Destroy",
+   "file": "Data/SoundFX/Global/Destroy.wav"
+  },
+  {
+   "name": "Global/DropDash",
+   "file": "Data/SoundFX/Global/DropDash.wav"
+  },
+  {
+   "name": "Global/FireDash",
+   "file": "Data/SoundFX/Global/FireDash.wav"
+  },
+  {
+   "name": "Global/FireShield",
+   "file": "Data/SoundFX/Global/FireShield.wav"
+  },
+  {
+   "name": "Global/Flying",
+   "file": "Data/SoundFX/Global/Flying.wav"
+  },
+  {
+   "name": "Global/Hurt",
+   "file": "Data/SoundFX/Global/Hurt.wav"
+  },
+  {
+   "name": "Global/HyperRing",
+   "file": "Data/SoundFX/Global/HyperRing.wav"
+  },
+  {
+   "name": "Global/InstaShield",
+   "file": "Data/SoundFX/Global/InstaShield.wav"
+  },
+  {
+   "name": "Global/Jump",
+   "file": "Data/SoundFX/Global/Jump.wav"
+  },
+  {
+   "name": "Global/LoseRings",
+   "file": "Data/SoundFX/Global/LoseRings.wav"
+  },
+  {
+   "name": "Global/MenuAccept",
+   "file": "Data/SoundFX/Global/MenuAccept.wav"
+  },
+  {
+   "name": "Global/MenuBleep",
+   "file": "Data/SoundFX/Global/MenuBleep.wav"
+  },
+  {
+   "name": "Global/MenuWoosh",
+   "file": "Data/SoundFX/Global/MenuWoosh.wav"
+  },
+  {
+   "name": "Global/Release",
+   "file": "Data/SoundFX/Global/Release.wav"
+  },
+  {
+   "name": "Global/Ring",
+   "file": "Data/SoundFX/Global/Ring.wav"
+  },
+  {
+   "name": "Global/Roll",
+   "file": "Data/SoundFX/Global/Roll.wav"
+  },
+  {
+   "name": "Global/ScoreAdd",
+   "file": "Data/SoundFX/Global/ScoreAdd.wav"
+  },
+  {
+   "name": "Global/ScoreTotal",
+   "file": "Data/SoundFX/Global/ScoreTotal.wav"
+  },
+  {
+   "name": "Global/SignPost",
+   "file": "Data/SoundFX/Global/SignPost.wav"
+  },
+  {
+   "name": "Global/Skidding",
+   "file": "Data/SoundFX/Global/Skidding.wav"
+  },
+  {
+   "name": "Global/SpecialRing",
+   "file": "Data/SoundFX/Global/SpecialRing.wav"
+  },
+  {
+   "name": "Global/SpecialWarp",
+   "file": "Data/SoundFX/Global/SpecialWarp.wav"
+  },
+  {
+   "name": "Global/Spring",
+   "file": "Data/SoundFX/Global/Spring.wav"
+  },
+  {
+   "name": "Global/Starpost",
+   "file": "Data/SoundFX/Global/Starpost.wav"
+  },
+  {
+   "name": "Global/Teleport",
+   "file": "Data/SoundFX/Global/Teleport.wav"
+  },
+  {
+   "name": "Global/Twinkle",
+   "file": "Data/SoundFX/Global/Twinkle.wav"
+  },
+  {
+   "name": "Global/Warp",
+   "file": "Data/SoundFX/Global/Warp.wav"
+  },
+  {
+   "name": "Stage/Beep",
+   "file": "Data/SoundFX/Stage/Beep.wav"
+  },
+  {
+   "name": "Stage/BossHit",
+   "file": "Data/SoundFX/Stage/BossHit.wav"
+  },
+  {
+   "name": "Stage/Button",
+   "file": "Data/SoundFX/Stage/Button.wav"
+  },
+  {
+   "name": "Stage/Clack",
+   "file": "Data/SoundFX/Stage/Clack.wav"
+  },
+  {
+   "name": "Stage/Explosion2",
+   "file": "Data/SoundFX/Stage/Explosion2.wav"
+  },
+  {
+   "name": "Stage/Impact2",
+   "file": "Data/SoundFX/Stage/Impact2.wav"
+  },
+  {
+   "name": "Stage/Impact3",
+   "file": "Data/SoundFX/Stage/Impact3.wav"
+  },
+  {
+   "name": "Stage/Impact4",
+   "file": "Data/SoundFX/Stage/Impact4.wav"
+  },
+  {
+   "name": "Stage/LedgeBreak",
+   "file": "Data/SoundFX/Stage/LedgeBreak.wav"
+  },
+  {
+   "name": "Stage/LedgeBreak3",
+   "file": "Data/SoundFX/Stage/LedgeBreak3.wav"
+  },
+  {
+   "name": "Stage/Rumble",
+   "file": "Data/SoundFX/Stage/Rumble.wav"
+  },
+  {
+   "name": "Stage/Splash",
+   "file": "Data/SoundFX/Stage/Splash.wav"
+  },
+  {
+   "name": "Stage/Transform",
+   "file": "Data/SoundFX/Stage/Transform.wav"
+  },
+  {
+   "name": "Stage/Warning",
+   "file": "Data/SoundFX/Stage/Warning.wav"
+  },
+  {
+   "name": "Global/Tired",
+   "file": "Data/SoundFX/Global/Tired.wav"
+  },
+  {
+   "name": "Global/Grab",
+   "file": "Data/SoundFX/Global/Grab.wav"
+  }
+ ],
+ "extra": [
+  {
+   "name": "@Ring",
+   "bin": "Data/Sprites/Global/Ring.bin",
+   "anim": "Normal Ring"
+  },
+  {
+   "name": "@Sparkle",
+   "bin": "Data/Sprites/Global/Ring.bin",
+   "anim": "Sparkle 2"
+  },
+  {
+   "name": "@SpinDust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Spin Dash"
+  },
+  {
+   "name": "@Dust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Dust Puff"
+  },
+  {
+   "name": "@DropDust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Drop Dash"
+  },
+  {
+   "name": "@Explosion",
+   "bin": "Data/Sprites/Global/Explosions.bin",
+   "anim": "Enemy"
+  },
+  {
+   "name": "@Flicky",
+   "bin": "Data/Sprites/Global/Animals.bin",
+   "anim": "Flicky"
+  },
+  {
+   "name": "@InstaShield",
+   "bin": "Data/Sprites/Global/Shields.bin",
+   "anim": "InstaShield"
+  },
+  {
+   "name": "@Tail0",
+   "bin": "Data/Sprites/Players/TailSprite.bin",
+   "anim": "Tails 0"
+  },
+  {
+   "name": "@Tail1",
+   "bin": "Data/Sprites/Players/TailSprite.bin",
+   "anim": "Tails 1"
+  },
+  {
+   "name": "@Tail2",
+   "bin": "Data/Sprites/Players/TailSprite.bin",
+   "anim": "Tails 2"
+  },
+  {
+   "name": "@Tail3",
+   "bin": "Data/Sprites/Players/TailSprite.bin",
+   "anim": "Tails 3"
+  },
+  {
+   "name": "@Tail5",
+   "bin": "Data/Sprites/Players/TailSprite.bin",
+   "anim": "Tails 5"
+  }
+ ],
+ "chars": [
+  {
+   "prefix": "Tails|",
+   "bin": "Data/Sprites/Players/Tails.bin",
+   "extra": [
+    "Fly",
+    "Fly Tired"
+   ]
+  },
+  {
+   "prefix": "Knux|",
+   "bin": "Data/Sprites/Players/Knux.bin",
+   "extra": [
+    "Glide",
+    "Glide Drop",
+    "Climb Idle",
+    "Climb Up",
+    "Climb Down"
+   ]
+  }
+ ]
+}

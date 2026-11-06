@@ -1,0 +1,96 @@
+{
+ "sheet": "moves",
+ "note": "What each button does as Sonic. state: the Pizza Tower state number the move reports, so doors, gates and enemies recognise him.",
+ "columns": [
+  "move",
+  "input",
+  "state",
+  "from",
+  "sound",
+  "breaks_and_kills",
+  "land_sound"
+ ],
+ "rows": [
+  {
+   "move": "run",
+   "input": "left/right",
+   "state": 0,
+   "from": "Mania momentum: accel, friction, skid, slopes",
+   "sound": "Global/Skidding",
+   "breaks_and_kills": false,
+   "land_sound": "none"
+  },
+  {
+   "move": "jump",
+   "input": "jump",
+   "state": 92,
+   "from": "Mania",
+   "sound": "Global/Jump",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "spindash",
+   "input": "down + jump, tap jump to rev, let go of down",
+   "state": 65,
+   "from": "Mania",
+   "sound": "Global/Charge",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "roll",
+   "input": "down while moving, or the dash button",
+   "state": 65,
+   "from": "Mania; under a low ceiling the ball keeps moving where the player holds, so Sonic can never be stuck in a crawlspace",
+   "sound": "Global/Roll",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "drop_dash",
+   "input": "jump, then hold jump in the air",
+   "state": 92,
+   "from": "Mania",
+   "sound": "Global/DropDash",
+   "breaks_and_kills": true,
+   "land_sound": "Global/Release"
+  },
+  {
+   "move": "wall_run",
+   "input": "run into a wall at speed",
+   "state": 37,
+   "from": "Pizza Tower's wall climb, reached at Sonic's speed",
+   "sound": "Global/Roll",
+   "breaks_and_kills": false,
+   "land_sound": "none"
+  },
+  {
+   "move": "super_jump",
+   "input": "up + jump",
+   "state": 99,
+   "from": "Pizza Tower's super jump, drawn with Sonic's spring twirl",
+   "sound": "Global/Flying",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "ground_pound",
+   "input": "down + jump in the air",
+   "state": 108,
+   "from": "Pizza Tower's body slam, drawn as Sonic's ball",
+   "sound": "Global/DropDash",
+   "breaks_and_kills": true,
+   "land_sound": "Global/Release"
+  },
+  {
+   "move": "taunt",
+   "input": "taunt",
+   "state": 84,
+   "from": "Pizza Tower's taunt and parry timing, a different Sonic pose each time",
+   "sound": "Global/Twinkle",
+   "breaks_and_kills": false,
+   "land_sound": "none"
+  }
+ ]
+}

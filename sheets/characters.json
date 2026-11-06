@@ -1,0 +1,66 @@
+{
+ "sheet": "characters",
+ "note": "Mania's four choices, picked with up and down on the file select. bin is where the character's sprites are in the player's Data.rsdk; extra is what only that character has. feet_lift moves the character down so the feet meet the ground: Mania's Tails frames end at 16 pixels below his anchor and the others' at 20, so 4 Mania pixels, 8 here. ball_lift does the same for the jump ball, added to physics ball_offset: 14 pixels for Tails, 15 for the others.",
+ "columns": [
+  "mode",
+  "label",
+  "character",
+  "name",
+  "sidekick",
+  "bin",
+  "extra",
+  "jump_mult",
+  "feet_lift",
+  "ball_lift"
+ ],
+ "rows": [
+  {
+   "mode": 0,
+   "label": "SONIC AND TAILS",
+   "character": "Sonic",
+   "name": "SONIC",
+   "sidekick": "yes",
+   "bin": "Data/Sprites/Players/Sonic.bin",
+   "extra": "none",
+   "jump_mult": 1,
+   "feet_lift": 0,
+   "ball_lift": 0
+  },
+  {
+   "mode": 1,
+   "label": "SONIC",
+   "character": "Sonic",
+   "name": "SONIC",
+   "sidekick": "no",
+   "bin": "Data/Sprites/Players/Sonic.bin",
+   "extra": "none",
+   "jump_mult": 1,
+   "feet_lift": 0,
+   "ball_lift": 0
+  },
+  {
+   "mode": 2,
+   "label": "TAILS",
+   "character": "Tails",
+   "name": "TAILS",
+   "sidekick": "no",
+   "bin": "Data/Sprites/Players/Tails.bin",
+   "extra": "Fly,Fly Tired",
+   "jump_mult": 1,
+   "feet_lift": 8,
+   "ball_lift": 2
+  },
+  {
+   "mode": 3,
+   "label": "KNUCKLES",
+   "character": "Knux",
+   "name": "KNUCKLES",
+   "sidekick": "no",
+   "bin": "Data/Sprites/Players/Knux.bin",
+   "extra": "Glide,Glide Drop,Climb Idle,Climb Up,Climb Down",
+   "jump_mult": 0.92,
+   "feet_lift": 0,
+   "ball_lift": 0
+  }
+ ]
+}

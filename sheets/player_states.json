@@ -1,0 +1,1092 @@
+{
+ "sheet": "player_states",
+ "note": "Every player state in obj_player's Step. handler sonic: Sonic's physics runs it; game: Pizza Tower's logic runs it, Sonic is drawn with anim.",
+ "columns": [
+  "state",
+  "script",
+  "handler",
+  "anim"
+ ],
+ "rows": [
+  {
+   "state": 0,
+   "script": "scr_player_normal",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 1,
+   "script": "scr_player_revolver",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 2,
+   "script": "scr_player_dynamite",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 3,
+   "script": "scr_player_boots",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 4,
+   "script": "scr_player_grabbed",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 5,
+   "script": "scr_player_tumble",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 6,
+   "script": "scr_player_finishingblow",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 7,
+   "script": "scr_player_ejected",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 8,
+   "script": "scr_player_transitioncutscene",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 9,
+   "script": "scr_player_fireass",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 10,
+   "script": "scr_player_firemouth",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 11,
+   "script": "scr_player_mort",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 12,
+   "script": "scr_player_mortjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 13,
+   "script": "scr_player_mortattack",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 14,
+   "script": "scr_player_morthook",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 15,
+   "script": "scr_player_hook",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 16,
+   "script": "scr_player_ghost",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 17,
+   "script": "scr_player_ghostpossess",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 18,
+   "script": "scr_player_titlescreen",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 19,
+   "script": "scr_playerN_hookshot",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 20,
+   "script": "scr_player_tacklecharge",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 21,
+   "script": "scr_player_cheeseball",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 22,
+   "script": "scr_player_cheeseballclimbwall",
+   "handler": "game",
+   "anim": "Run"
+  },
+  {
+   "state": 23,
+   "script": "scr_player_slap",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 24,
+   "script": "scr_player_cheesepep",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 25,
+   "script": "scr_player_cheesepepstick",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 26,
+   "script": "scr_player_cheesepepjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 27,
+   "script": "scr_player_cheesepepfling",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 28,
+   "script": "scr_player_cheesepeplaunch",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 29,
+   "script": "scr_player_cheesepepstickside",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 30,
+   "script": "scr_player_cheesepepstickup",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 31,
+   "script": "scr_player_rideweenie",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 32,
+   "script": "scr_player_motorcycle",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 33,
+   "script": "scr_player_boxxedpep",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 34,
+   "script": "scr_player_boxxedpepspin",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 35,
+   "script": "scr_player_boxxedpepjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 36,
+   "script": "scr_player_pistolaim",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 37,
+   "script": "scr_player_climbwall",
+   "handler": "game",
+   "anim": "Run"
+  },
+  {
+   "state": 38,
+   "script": "scr_player_knightpepslopes",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 39,
+   "script": "scr_player_portal",
+   "handler": "game",
+   "anim": "Ride"
+  },
+  {
+   "state": 40,
+   "script": "scr_player_secondjump",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 41,
+   "script": "scr_player_chainsawbump",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 42,
+   "script": "scr_player_handstandjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 43,
+   "script": "scr_player_lungeattack",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 44,
+   "script": "scr_player_lungegrab",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 45,
+   "script": "scr_player_dashtumble",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 46,
+   "script": "scr_player_gottreasure",
+   "handler": "game",
+   "anim": "Victory"
+  },
+  {
+   "state": 47,
+   "script": "scr_player_knightpep",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 48,
+   "script": "scr_player_knightpepattack",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 49,
+   "script": "scr_player_knightpepbump",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 50,
+   "script": "scr_player_meteorpep",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 51,
+   "script": "scr_player_bombpep",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 52,
+   "script": "scr_player_bombgrab",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 53,
+   "script": "scr_player_bombpepside",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 54,
+   "script": "scr_player_bombpepup",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 55,
+   "script": "scr_player_grabbing",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 56,
+   "script": "scr_player_chainsawpogo",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 57,
+   "script": "scr_player_shotgunjump",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 58,
+   "script": "scr_player_pogo",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 59,
+   "script": "scr_player_stunned",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 60,
+   "script": "scr_player_highjump",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 61,
+   "script": "scr_player_chainsaw",
+   "handler": "game",
+   "anim": "hold-frame"
+  },
+  {
+   "state": 62,
+   "script": "scr_player_facestomp",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 64,
+   "script": "scr_player_timesup",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 65,
+   "script": "scr_player_machroll",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 66,
+   "script": "scr_player_shotgun",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 67,
+   "script": "scr_player_shotguncrouch",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 68,
+   "script": "scr_player_shotguncrouchjump",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 69,
+   "script": "scr_player_shotgunshoot",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 70,
+   "script": "scr_player_shotgundash",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 71,
+   "script": "scr_player_shotgunfreefall",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 72,
+   "script": "scr_player_pistol",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 73,
+   "script": "scr_player_machfreefall",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 74,
+   "script": "scr_player_throwing",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 75,
+   "script": "scr_player_slam",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 76,
+   "script": "scr_player_superslam",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 77,
+   "script": "scr_player_skateboard",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 78,
+   "script": "scr_player_grind",
+   "handler": "game",
+   "anim": "Ride"
+  },
+  {
+   "state": 79,
+   "script": "scr_player_grab",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 80,
+   "script": "scr_player_punch",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 81,
+   "script": "scr_player_backkick",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 82,
+   "script": "scr_player_uppunch",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 83,
+   "script": "scr_player_shoulder",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 84,
+   "script": "scr_player_backbreaker",
+   "handler": "game",
+   "anim": "taunt-pose"
+  },
+  {
+   "state": 85,
+   "script": "scr_player_graffiti",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 86,
+   "script": "scr_player_bossdefeat",
+   "handler": "game",
+   "anim": "Die"
+  },
+  {
+   "state": 87,
+   "script": "scr_player_pizzathrow",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 88,
+   "script": "scr_player_bossintro",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 89,
+   "script": "scr_player_gameover",
+   "handler": "game",
+   "anim": "Die"
+  },
+  {
+   "state": 90,
+   "script": "scr_player_keyget",
+   "handler": "game",
+   "anim": "Victory"
+  },
+  {
+   "state": 91,
+   "script": "scr_player_tackle",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 92,
+   "script": "scr_player_jump",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 93,
+   "script": "scr_player_ladder",
+   "handler": "game",
+   "anim": "Hang Move"
+  },
+  {
+   "state": 94,
+   "script": "scr_player_slipnslide",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 95,
+   "script": "scr_player_comingoutdoor",
+   "handler": "game",
+   "anim": "Walk"
+  },
+  {
+   "state": 96,
+   "script": "scr_player_smirk",
+   "handler": "game",
+   "anim": "Victory"
+  },
+  {
+   "state": 97,
+   "script": "scr_player_Sjump",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 98,
+   "script": "scr_player_victory",
+   "handler": "game",
+   "anim": "Victory"
+  },
+  {
+   "state": 99,
+   "script": "scr_player_Sjumpprep",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 100,
+   "script": "scr_player_crouch",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 101,
+   "script": "scr_player_crouchjump",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 102,
+   "script": "scr_player_crouchslide",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 103,
+   "script": "scr_player_mach1",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 104,
+   "script": "scr_player_mach2",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 105,
+   "script": "scr_player_machslide",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 106,
+   "script": "scr_player_bump",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 107,
+   "script": "scr_player_hurt",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 108,
+   "script": "scr_player_freefall",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 109,
+   "script": "scr_player_hang",
+   "handler": "game",
+   "anim": "Hang Move"
+  },
+  {
+   "state": 111,
+   "script": "scr_player_freefallland",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 112,
+   "script": "scr_player_door",
+   "handler": "game",
+   "anim": "Look Up"
+  },
+  {
+   "state": 113,
+   "script": "scr_player_barrel",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 114,
+   "script": "scr_player_barreljump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 115,
+   "script": "scr_player_barrelclimbwall",
+   "handler": "game",
+   "anim": "Run"
+  },
+  {
+   "state": 116,
+   "script": "scr_player_barrelslide",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 117,
+   "script": "scr_player_current",
+   "handler": "game",
+   "anim": "Ride"
+  },
+  {
+   "state": 118,
+   "script": "scr_player_boulder",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 119,
+   "script": "scr_player_taxi",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 120,
+   "script": "scr_player_runonball",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 121,
+   "script": "scr_player_mach3",
+   "handler": "sonic",
+   "anim": "by-move"
+  },
+  {
+   "state": 122,
+   "script": "scr_player_freefallprep",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 123,
+   "script": "scr_player_Sjumpland",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 124,
+   "script": "scr_player_faceplant",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 137,
+   "script": "scr_player_hit",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 144,
+   "script": "scr_player_arenaintro",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 146,
+   "script": "scr_player_actor",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 147,
+   "script": "scr_player_parry",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 148,
+   "script": "scr_player_golf",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 150,
+   "script": "scr_player_tube",
+   "handler": "game",
+   "anim": "Ride"
+  },
+  {
+   "state": 152,
+   "script": "scr_player_taxi",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 153,
+   "script": "scr_player_shoulderbash",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 154,
+   "script": "scr_player_pummel",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 156,
+   "script": "scr_player_thrown",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 165,
+   "script": "scr_player_slipbanan",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 168,
+   "script": "scr_playerN_throwkick",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 183,
+   "script": "scr_player_bombdelete",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 184,
+   "script": "scr_player_rocket",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 185,
+   "script": "scr_player_rocketslide",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 186,
+   "script": "scr_player_gotoplayer",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 187,
+   "script": "scr_player_trickjump",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 190,
+   "script": "scr_player_ridecow",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 191,
+   "script": "scr_player_ratmount",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 192,
+   "script": "scr_player_ratmountjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 193,
+   "script": "scr_player_ratmountattack",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 194,
+   "script": "scr_player_ratmountspit",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 195,
+   "script": "scr_player_ratmountclimbwall",
+   "handler": "game",
+   "anim": "Run"
+  },
+  {
+   "state": 196,
+   "script": "scr_player_ratmounthurt",
+   "handler": "game",
+   "anim": "Hurt"
+  },
+  {
+   "state": 197,
+   "script": "scr_player_ratmountgroundpound",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 198,
+   "script": "scr_player_ratmountbounce",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 200,
+   "script": "scr_player_ratmountballoon",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 201,
+   "script": "scr_player_ratmounttumble",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 202,
+   "script": "scr_player_ratmountgrind",
+   "handler": "game",
+   "anim": "Ride"
+  },
+  {
+   "state": 203,
+   "script": "scr_player_ratmounttrickjump",
+   "handler": "game",
+   "anim": "Spring Twirl"
+  },
+  {
+   "state": 204,
+   "script": "scr_player_ratmountskid",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 206,
+   "script": "scr_player_blockstance",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 207,
+   "script": "scr_player_balloon",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 208,
+   "script": "scr_player_debugstate",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 210,
+   "script": "scr_player_trashjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 211,
+   "script": "scr_player_trashroll",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 212,
+   "script": "scr_player_stringfling",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 213,
+   "script": "scr_player_stringjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 214,
+   "script": "scr_player_stringfall",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 215,
+   "script": "scr_player_noisejetpack",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 216,
+   "script": "scr_player_spiderweb",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 225,
+   "script": "scr_player_animatronic",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 252,
+   "script": "scr_player_playersuperattack",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 254,
+   "script": "scr_player_jetpackjump",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 257,
+   "script": "scr_player_bee",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 259,
+   "script": "scr_player_ratmountpunch",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 260,
+   "script": "scr_player_ratmountcrouch",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 261,
+   "script": "scr_player_ratmountladder",
+   "handler": "game",
+   "anim": "Hang Move"
+  },
+  {
+   "state": 262,
+   "script": "scr_player_supergrab",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 265,
+   "script": "scr_player_antigrav",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 270,
+   "script": "scr_player_estampede",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 283,
+   "script": "scr_player_noisecrusher",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 290,
+   "script": "scr_player_backtohub",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 293,
+   "script": "scr_player_animation",
+   "handler": "game",
+   "anim": "Idle"
+  },
+  {
+   "state": 295,
+   "script": "scr_player_fightball",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 305,
+   "script": "scr_playerN_machcancelstart",
+   "handler": "game",
+   "anim": "Jump"
+  },
+  {
+   "state": 306,
+   "script": "scr_playerN_machcancel",
+   "handler": "game",
+   "anim": "Jump"
+  }
+ ]
+}

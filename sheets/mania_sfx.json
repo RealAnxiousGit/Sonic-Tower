@@ -1,0 +1,180 @@
+{
+ "sheet": "mania_sfx",
+ "note": "Mania sounds read from the player's Data.rsdk at launch.",
+ "columns": [
+  "name",
+  "file"
+ ],
+ "rows": [
+  {
+   "name": "Global/Charge",
+   "file": "Data/SoundFX/Global/Charge.wav"
+  },
+  {
+   "name": "Global/Destroy",
+   "file": "Data/SoundFX/Global/Destroy.wav"
+  },
+  {
+   "name": "Global/DropDash",
+   "file": "Data/SoundFX/Global/DropDash.wav"
+  },
+  {
+   "name": "Global/FireDash",
+   "file": "Data/SoundFX/Global/FireDash.wav"
+  },
+  {
+   "name": "Global/FireShield",
+   "file": "Data/SoundFX/Global/FireShield.wav"
+  },
+  {
+   "name": "Global/Flying",
+   "file": "Data/SoundFX/Global/Flying.wav"
+  },
+  {
+   "name": "Global/Hurt",
+   "file": "Data/SoundFX/Global/Hurt.wav"
+  },
+  {
+   "name": "Global/HyperRing",
+   "file": "Data/SoundFX/Global/HyperRing.wav"
+  },
+  {
+   "name": "Global/InstaShield",
+   "file": "Data/SoundFX/Global/InstaShield.wav"
+  },
+  {
+   "name": "Global/Jump",
+   "file": "Data/SoundFX/Global/Jump.wav"
+  },
+  {
+   "name": "Global/LoseRings",
+   "file": "Data/SoundFX/Global/LoseRings.wav"
+  },
+  {
+   "name": "Global/MenuAccept",
+   "file": "Data/SoundFX/Global/MenuAccept.wav"
+  },
+  {
+   "name": "Global/MenuBleep",
+   "file": "Data/SoundFX/Global/MenuBleep.wav"
+  },
+  {
+   "name": "Global/MenuWoosh",
+   "file": "Data/SoundFX/Global/MenuWoosh.wav"
+  },
+  {
+   "name": "Global/Release",
+   "file": "Data/SoundFX/Global/Release.wav"
+  },
+  {
+   "name": "Global/Ring",
+   "file": "Data/SoundFX/Global/Ring.wav"
+  },
+  {
+   "name": "Global/Roll",
+   "file": "Data/SoundFX/Global/Roll.wav"
+  },
+  {
+   "name": "Global/ScoreAdd",
+   "file": "Data/SoundFX/Global/ScoreAdd.wav"
+  },
+  {
+   "name": "Global/ScoreTotal",
+   "file": "Data/SoundFX/Global/ScoreTotal.wav"
+  },
+  {
+   "name": "Global/SignPost",
+   "file": "Data/SoundFX/Global/SignPost.wav"
+  },
+  {
+   "name": "Global/Skidding",
+   "file": "Data/SoundFX/Global/Skidding.wav"
+  },
+  {
+   "name": "Global/SpecialRing",
+   "file": "Data/SoundFX/Global/SpecialRing.wav"
+  },
+  {
+   "name": "Global/SpecialWarp",
+   "file": "Data/SoundFX/Global/SpecialWarp.wav"
+  },
+  {
+   "name": "Global/Spring",
+   "file": "Data/SoundFX/Global/Spring.wav"
+  },
+  {
+   "name": "Global/Starpost",
+   "file": "Data/SoundFX/Global/Starpost.wav"
+  },
+  {
+   "name": "Global/Teleport",
+   "file": "Data/SoundFX/Global/Teleport.wav"
+  },
+  {
+   "name": "Global/Twinkle",
+   "file": "Data/SoundFX/Global/Twinkle.wav"
+  },
+  {
+   "name": "Global/Warp",
+   "file": "Data/SoundFX/Global/Warp.wav"
+  },
+  {
+   "name": "Stage/Beep",
+   "file": "Data/SoundFX/Stage/Beep.wav"
+  },
+  {
+   "name": "Stage/BossHit",
+   "file": "Data/SoundFX/Stage/BossHit.wav"
+  },
+  {
+   "name": "Stage/Button",
+   "file": "Data/SoundFX/Stage/Button.wav"
+  },
+  {
+   "name": "Stage/Clack",
+   "file": "Data/SoundFX/Stage/Clack.wav"
+  },
+  {
+   "name": "Stage/Explosion2",
+   "file": "Data/SoundFX/Stage/Explosion2.wav"
+  },
+  {
+   "name": "Stage/Impact2",
+   "file": "Data/SoundFX/Stage/Impact2.wav"
+  },
+  {
+   "name": "Stage/Impact3",
+   "file": "Data/SoundFX/Stage/Impact3.wav"
+  },
+  {
+   "name": "Stage/Impact4",
+   "file": "Data/SoundFX/Stage/Impact4.wav"
+  },
+  {
+   "name": "Stage/LedgeBreak",
+   "file": "Data/SoundFX/Stage/LedgeBreak.wav"
+  },
+  {
+   "name": "Stage/LedgeBreak3",
+   "file": "Data/SoundFX/Stage/LedgeBreak3.wav"
+  },
+  {
+   "name": "Stage/Rumble",
+   "file": "Data/SoundFX/Stage/Rumble.wav"
+  },
+  {
+   "name": "Stage/Splash",
+   "file": "Data/SoundFX/Stage/Splash.wav"
+  },
+  {
+   "name": "Stage/Transform",
+   "file": "Data/SoundFX/Stage/Transform.wav"
+  },
+  {
+   "name": "Stage/Warning",
+   "file": "Data/SoundFX/Stage/Warning.wav"
+  },
+  {"name": "Global/Tired", "file": "Data/SoundFX/Global/Tired.wav"},
+  {"name": "Global/Grab", "file": "Data/SoundFX/Global/Grab.wav"}
+ ]
+}

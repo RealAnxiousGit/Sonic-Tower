@@ -1,0 +1,178 @@
+{
+ "sheet": "physics",
+ "note": "Sonic Mania's values, doubled because Pizza Tower's world is drawn at about twice Mania's scale.",
+ "columns": [
+  "name",
+  "value",
+  "mania_value"
+ ],
+ "rows": [
+  {
+   "name": "acc",
+   "value": 0.09375,
+   "mania_value": 0.046875
+  },
+  {
+   "name": "dec",
+   "value": 1.0,
+   "mania_value": 0.5
+  },
+  {
+   "name": "frc",
+   "value": 0.09375,
+   "mania_value": 0.046875
+  },
+  {
+   "name": "top",
+   "value": 12.0,
+   "mania_value": 6.0
+  },
+  {
+   "name": "air_acc",
+   "value": 0.1875,
+   "mania_value": 0.09375
+  },
+  {
+   "name": "jump",
+   "value": 14.0,
+   "mania_value": 6.5
+  },
+  {
+   "name": "jump_cut",
+   "value": 8.0,
+   "mania_value": 4.0
+  },
+  {
+   "name": "roll_frc",
+   "value": 0.046875,
+   "mania_value": 0.0234375
+  },
+  {
+   "name": "roll_dec",
+   "value": 0.25,
+   "mania_value": 0.125
+  },
+  {
+   "name": "roll_min",
+   "value": 1.0,
+   "mania_value": 0.5
+  },
+  {
+   "name": "roll_start",
+   "value": 2.0,
+   "mania_value": 1.0
+  },
+  {
+   "name": "slope",
+   "value": 0.25,
+   "mania_value": 0.125
+  },
+  {
+   "name": "slope_roll_up",
+   "value": 0.15625,
+   "mania_value": 0.078125
+  },
+  {
+   "name": "slope_roll_down",
+   "value": 0.625,
+   "mania_value": 0.3125
+  },
+  {
+   "name": "spin_base",
+   "value": 16.0,
+   "mania_value": 8.0
+  },
+  {
+   "name": "spin_per_rev",
+   "value": 1.0,
+   "mania_value": 0.5
+  },
+  {
+   "name": "drop_base",
+   "value": 16.0,
+   "mania_value": 8.0
+  },
+  {
+   "name": "drop_max",
+   "value": 24.0,
+   "mania_value": 12.0
+  },
+  {
+   "name": "drop_charge",
+   "value": 20.0,
+   "mania_value": 20.0
+  },
+  {
+   "name": "wall_run_speed",
+   "value": 10.0,
+   "mania_value": "not in Mania: lets Sonic reach Pizza Tower's tall shafts"
+  },
+  {
+   "name": "feet_offset",
+   "value": 6.0,
+   "mania_value": "drawing only"
+  },
+  {
+   "name": "ball_offset",
+   "value": 8.0,
+   "mania_value": "drawing only"
+  },
+  {
+   "name": "sfx_mix",
+   "value": 0.65,
+   "mania_value": "sound: level of Mania's sounds next to Pizza Tower's own, from the mixer meter at full volume: hurt 1.0, kill 0.54, jump 0.45 of Mania's level"
+  },
+  {
+   "name": "sfx_gain_at_17",
+   "value": 0.05,
+   "mania_value": "sound: what Pizza Tower's slider at 17% does to its own sound effects, from the mixer meter (hurt 0.018 of 0.36)"
+  },
+  {
+   "name": "sfx_gain_at_50",
+   "value": 0.17,
+   "mania_value": "sound: what Pizza Tower's slider at 50% does to its own sound effects, from the mixer meter (hurt 0.062 of 0.36)"
+  },
+  {
+   "name": "door_walk_ticks",
+   "value": 4,
+   "mania_value": "door animation, built from Mania's frames: Mania has no doors"
+  },
+  {
+   "name": "door_fade_start",
+   "value": 3,
+   "mania_value": "door animation, built from Mania's frames: Mania has no doors"
+  },
+  {
+   "name": "door_fade_ticks",
+   "value": 9,
+   "mania_value": "door animation, built from Mania's frames: Mania has no doors"
+  },
+  {
+   "name": "door_scale_min",
+   "value": 0.8,
+   "mania_value": "door animation, built from Mania's frames: Mania has no doors"
+  },
+  {
+   "name": "gate_anim_rate",
+   "value": 0.35,
+   "mania_value": "a level gate holds the screen longer than a door's fade, so the same animation plays slower"
+  },
+  {"name": "rank_zoom_ms", "value": 850, "mania_value": "how long Sonic takes to zoom up on the results screen"},
+  {"name": "rank_scale", "value": 3, "mania_value": "Sonic's size at the end of the zoom"},
+  {"name": "rank_x", "value": 225, "mania_value": "where he ends up, in the 960 by 540 screen"},
+  {"name": "rank_y", "value": 300, "mania_value": "where he ends up, in the 960 by 540 screen"},
+  {"name": "rank_p_y", "value": 300, "mania_value": "on the P rank he stands on the stage, centre screen"},
+  {"name": "menu_scale", "value": 3, "mania_value": "Sonic's size on the file select"},
+  {"name": "menu_y", "value": 36, "mania_value": "how far below the game's Peppino spot he stands, on the floor by the stool"},
+  {"name": "fly_ticks", "value": 480, "mania_value": "Tails tires after 8 seconds, as in Mania"},
+  {"name": "fly_lift", "value": 0.25, "mania_value": "each tap of jump lifts him, doubled"},
+  {"name": "fly_up", "value": 4, "mania_value": "fastest he rises, doubled"},
+  {"name": "fly_fall", "value": 0.0625, "mania_value": "how gently he sinks, doubled"},
+  {"name": "fly_down", "value": 4, "mania_value": "fastest he sinks while flying, doubled"},
+  {"name": "glide_start", "value": 8, "mania_value": "Knuckles's glide starts at 4, doubled"},
+  {"name": "glide_top", "value": 24, "mania_value": "and speeds up to 12, doubled"},
+  {"name": "glide_acc", "value": 0.0625, "mania_value": "how fast the glide gains speed, doubled"},
+  {"name": "glide_fall", "value": 1, "mania_value": "how fast the glide sinks, doubled"},
+  {"name": "climb_speed", "value": 2, "mania_value": "climbing speed, doubled"}
+ ]
+}

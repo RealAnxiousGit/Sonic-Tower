@@ -1,0 +1,65 @@
+{
+ "sheet": "effects",
+ "note": "Mania's effect sprites, each played with Mania's own frame timings.",
+ "columns": [
+  "name",
+  "bin",
+  "anim",
+  "when"
+ ],
+ "rows": [
+  {
+   "name": "@Ring",
+   "bin": "Data/Sprites/Global/Ring.bin",
+   "anim": "Normal Ring",
+   "when": "scattered rings and the ring count"
+  },
+  {
+   "name": "@Sparkle",
+   "bin": "Data/Sprites/Global/Ring.bin",
+   "anim": "Sparkle 2",
+   "when": "picking up rings and toppings"
+  },
+  {
+   "name": "@SpinDust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Spin Dash",
+   "when": "while revving a spindash"
+  },
+  {
+   "name": "@Dust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Dust Puff",
+   "when": "skidding and spindash release"
+  },
+  {
+   "name": "@DropDust",
+   "bin": "Data/Sprites/Global/Dust.bin",
+   "anim": "Drop Dash",
+   "when": "drop dash landing"
+  },
+  {
+   "name": "@Explosion",
+   "bin": "Data/Sprites/Global/Explosions.bin",
+   "anim": "Enemy",
+   "when": "killing an enemy"
+  },
+  {
+   "name": "@Flicky",
+   "bin": "Data/Sprites/Global/Animals.bin",
+   "anim": "Flicky",
+   "when": "the animal freed from a killed enemy"
+  },
+  {
+   "name": "@InstaShield",
+   "bin": "Data/Sprites/Global/Shields.bin",
+   "anim": "InstaShield",
+   "when": "a successful taunt parry"
+  },
+  {"name": "@Tail0", "bin": "Data/Sprites/Players/TailSprite.bin", "anim": "Tails 0", "when": "Tails standing"},
+  {"name": "@Tail1", "bin": "Data/Sprites/Players/TailSprite.bin", "anim": "Tails 1", "when": "Tails in a jump"},
+  {"name": "@Tail2", "bin": "Data/Sprites/Players/TailSprite.bin", "anim": "Tails 2", "when": "Tails skidding"},
+  {"name": "@Tail3", "bin": "Data/Sprites/Players/TailSprite.bin", "anim": "Tails 3", "when": "Tails pushing"},
+  {"name": "@Tail5", "bin": "Data/Sprites/Players/TailSprite.bin", "anim": "Tails 5", "when": "Tails charging a spindash"}
+ ]
+}

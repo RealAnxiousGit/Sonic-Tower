@@ -1,0 +1,7 @@
+UndertaleModTool's command-line build (utmt\ folder), by the UndertaleModTool contributors (the Underminers team).
+License: GNU GPL 3.0, in utmt\LICENSE.txt. It's a separate program, shipped unchanged, and Sonic Tower's launcher only starts it.
+Source: https://github.com/UnderminersTeam/UndertaleModTool (release 0.9.2.0)
+
+Pizza Tower is by Tour De Pizza. Sonic Mania is by SEGA, Christian Whitehead, Headcannon and PagodaWest Games.
+Neither game's files are included. Sonic Tower reads them from your own copies when it runs.
+Sonic Tower is an unofficial fan mod, not affiliated with either.

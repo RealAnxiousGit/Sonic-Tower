@@ -1,0 +1,20 @@
+{
+ "sheet": "systems",
+ "note": "Every game system the mashup touches, and how.",
+ "columns": ["system", "pizza_tower", "sonic_mania", "how"],
+ "rows": [
+  {"system": "movement", "pizza_tower": "levels, solids, slopes", "sonic_mania": "momentum, spindash, drop dash", "how": "Sonic's physics runs inside Pizza Tower's states 0, 92 and 65"},
+  {"system": "combo", "pizza_tower": "global.combo, combotime, heat, rank", "sonic_mania": "none", "how": "kills go through the game's own Instakill, so the combo counts and drains exactly as for Peppino"},
+  {"system": "breaking", "pizza_tower": "obj_destructibles, obj_metalblock, obj_tntblock", "sonic_mania": "rolling attack", "how": "the ball destroys anything breakable it touches"},
+  {"system": "music", "pizza_tower": "FMOD music events", "sonic_mania": "none", "how": "untouched"},
+  {"system": "sound", "pizza_tower": "FMOD sfx events", "sonic_mania": "WAVs in Data.rsdk", "how": "sounds sheet: each event plays a Mania sound, is muted, or keeps its own"},
+  {"system": "rings", "pizza_tower": "collect events, hurt", "sonic_mania": "Ring sprite, Ring and LoseRings sounds", "how": "pickups add rings, a hit scatters them to grab back"},
+  {"system": "taunt", "pizza_tower": "scr_dotaunt, parry", "sonic_mania": "Sonic's pose frames", "how": "game's taunt runs, Sonic is drawn in a pose from taunt_poses"},
+  {"system": "pizza_time", "pizza_tower": "global.panic, escape", "sonic_mania": "none", "how": "untouched, run at Sonic's speed"},
+  {"system": "saves", "pizza_tower": "saves folder", "sonic_mania": "none", "how": "Sonic Tower keeps its own saves folder and leaves the player's alone"},
+  {"system": "hud", "pizza_tower": "obj_tv, combo meter", "sonic_mania": "HUD and Ring sprites", "how": "the game's HUD stays, with Sonic and a ring count added"},
+  {"system": "results", "pizza_tower": "obj_rank, rank letters and words", "sonic_mania": "Victory animation", "how": "Sonic zooms up from where he stood at the exit into his victory pose; the game's own letter and words are cut out of its rank art and drawn beside him"},
+  {"system": "menu", "pizza_tower": "obj_mainmenu, spr_titlepep, spr_vspeppino", "sonic_mania": "Idle, Walk, Hurt, Victory animations", "how": "the file select draws Sonic in Peppino's place and follows the same states; the boss VS art is rebuilt from Sonic's frames while the game runs"},
+  {"system": "characters", "pizza_tower": "the file select, words naming Peppino", "sonic_mania": "Tails and Knux sprites, Flying, Tired and Grab sounds", "how": "up and down on the file select picks Sonic and Tails, Sonic, Tails or Knuckles; each plays with its own Mania ability and every screen that shows the player follows"}
+ ]
+}

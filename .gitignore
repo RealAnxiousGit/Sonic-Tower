@@ -1,0 +1,6 @@
+.build/
+.tools/
+dist/
+release/
+launcher/bin/
+launcher/obj/

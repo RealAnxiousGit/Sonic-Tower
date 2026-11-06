@@ -1,0 +1,138 @@
+[
+ {
+  "original": "scr_player_normal",
+  "wrapper": "st_h_normal"
+ },
+ {
+  "original": "scr_player_jump",
+  "wrapper": "st_h_jump"
+ },
+ {
+  "original": "scr_player_mach1",
+  "wrapper": "st_h_mach1"
+ },
+ {
+  "original": "scr_player_mach2",
+  "wrapper": "st_h_mach2"
+ },
+ {
+  "original": "scr_player_mach3",
+  "wrapper": "st_h_mach3"
+ },
+ {
+  "original": "scr_player_machroll",
+  "wrapper": "st_h_machroll"
+ },
+ {
+  "original": "scr_player_crouch",
+  "wrapper": "st_h_crouch"
+ },
+ {
+  "original": "scr_player_crouchjump",
+  "wrapper": "st_h_crouchjump"
+ },
+ {
+  "original": "scr_player_crouchslide",
+  "wrapper": "st_h_crouchslide"
+ },
+ {
+  "original": "scr_player_machslide",
+  "wrapper": "st_h_machslide"
+ },
+ {
+  "original": "scr_hurtplayer",
+  "wrapper": "st_h_hurtplayer"
+ },
+ {
+  "original": "scr_player_door",
+  "wrapper": "st_h_door"
+ },
+ {
+  "original": "scr_player_comingoutdoor",
+  "wrapper": "st_h_comingoutdoor"
+ },
+ {
+  "original": "scr_player_victory",
+  "wrapper": "st_h_victory"
+ },
+ {
+  "original": "scr_sleep",
+  "wrapper": "st_h_sleep"
+ },
+ {
+  "original": "scr_collide_player",
+  "wrapper": "st_h_collide"
+ },
+ {
+  "original": "draw_player",
+  "wrapper": "st_h_draw_player"
+ },
+ {
+  "original": "create_blur_afterimage",
+  "wrapper": "st_h_blur"
+ },
+ {
+  "original": "create_mach3effect",
+  "wrapper": "st_h_mach3effect"
+ },
+ {
+  "original": "create_afterimage",
+  "wrapper": "st_h_afterimage"
+ },
+ {
+  "original": "create_red_afterimage",
+  "wrapper": "st_h_red"
+ },
+ {
+  "original": "create_blue_afterimage",
+  "wrapper": "st_h_blue"
+ },
+ {
+  "original": "create_firemouth_afterimage",
+  "wrapper": "st_h_firemouth"
+ },
+ {
+  "original": "create_heatattack_afterimage",
+  "wrapper": "st_h_heat"
+ },
+ {
+  "original": "create_noise_afterimage",
+  "wrapper": "st_h_noiseimg"
+ },
+ {
+  "original": "fmod_event_one_shot",
+  "wrapper": "st_h_one_shot"
+ },
+ {
+  "original": "fmod_event_one_shot_3d",
+  "wrapper": "st_h_one_shot_3d"
+ },
+ {
+  "original": "fmod_event_create_instance",
+  "wrapper": "st_h_create_instance"
+ },
+ {
+  "original": "fmod_event_instance_play",
+  "wrapper": "st_h_instance_play"
+ },
+ {
+  "original": "steam_update",
+  "wrapper": "st_h_tick"
+ },
+ {
+  "original": "steam_set_achievement",
+  "wrapper": "st_h_achievement"
+ },
+ {
+  "original": "scr_draw_rank",
+  "wrapper": "st_h_draw_rank"
+ },
+ {
+  "original": "lang_get_value",
+  "wrapper": "st_h_lang_value"
+ },
+ {
+  "original": "lang_get_value_newline",
+  "wrapper": "st_h_lang_newline"
+ }
+]

@@ -1,0 +1,23 @@
+{
+ "sheet": "taunt_poses",
+ "note": "Taunting works like Pizza Tower's: same button, timing and parry. Each taunt picks a different pose. kind pose: holds one Mania frame; super: plays the whole animation for the super taunt.",
+ "columns": ["pose", "anim", "frame", "kind"],
+ "rows": [
+  {"pose": "thumbs-up", "anim": "Victory", "frame": 13, "kind": "pose"},
+  {"pose": "victory-leap", "anim": "Victory", "frame": 5, "kind": "pose"},
+  {"pose": "foot-tap", "anim": "Bored 1", "frame": 5, "kind": "pose"},
+  {"pose": "look-at-watch", "anim": "Bored 2", "frame": 20, "kind": "pose"},
+  {"pose": "lying-back", "anim": "Bored 2", "frame": 60, "kind": "pose"},
+  {"pose": "outta-here", "anim": "Outta Here", "frame": 8, "kind": "pose"},
+  {"pose": "spring-pose", "anim": "Spring CS", "frame": 8, "kind": "pose"},
+  {"pose": "stand-turn", "anim": "Stand CS", "frame": 12, "kind": "pose"},
+  {"pose": "spin-twirl", "anim": "Spring Twirl", "frame": 4, "kind": "pose"},
+  {"pose": "fan-flip", "anim": "Fan", "frame": 3, "kind": "pose"},
+  {"pose": "twist", "anim": "Twister", "frame": 6, "kind": "pose"},
+  {"pose": "turntable", "anim": "Turntable", "frame": 5, "kind": "pose"},
+  {"pose": "super-victory", "anim": "Victory", "frame": 0, "kind": "super"},
+  {"pose": "super-transform", "anim": "Transform", "frame": 0, "kind": "super"},
+  {"pose": "super-twirl", "anim": "Spring Twirl", "frame": 0, "kind": "super"},
+  {"pose": "super-outta-here", "anim": "Outta Here", "frame": 0, "kind": "super"}
+ ]
+}

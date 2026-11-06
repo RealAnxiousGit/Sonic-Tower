@@ -1,0 +1,106 @@
+{
+ "sheet": "text",
+ "note": "English lines that teach Peppino's moves, rewritten for what these characters really do. The game's own line is used for every key not listed, and for other languages. Peppino in a line becomes the player's character.",
+ "columns": [
+  "key",
+  "text"
+ ],
+ "rows": [
+  {
+   "key": "tutorial1",
+   "text": "Press [J] to jump! You curl into a ball that breaks blocks and defeats enemies!"
+  },
+  {
+   "key": "tutorial2",
+   "text": "You can break marble and metal blocks underneath you with a slam! Press [D] and [J] while in the air!"
+  },
+  {
+   "key": "tutorial3",
+   "text": "The ball destroys metal blocks too, so jump into them or slam down on them!"
+  },
+  {
+   "key": "tutorial4",
+   "text": "Some blocks may be hidden, keep an eye out for them! Roll or spindash into them to destroy them!"
+  },
+  {
+   "key": "tutorial5",
+   "text": "Hold [D] and press [J] to charge a spindash! Tap [J] to rev it up, then let go of [D] to blast off! It can destroy marble blocks!"
+  },
+  {
+   "key": "tutorial6",
+   "text": "Get up to speed and run into a wall to start wall running!"
+  },
+  {
+   "key": "tutorial7",
+   "text": "Press [J] while wall running to jump off the wall!"
+  },
+  {
+   "key": "tutorial8",
+   "text": "Press [M] or hold [D] while moving to roll! Rolling down a slope builds speed fast. Try it out!"
+  },
+  {
+   "key": "tutorial9",
+   "text": "Jump while you're moving to carry your speed through the air!"
+  },
+  {
+   "key": "tutorial10",
+   "text": "At speed, you can also simply run up a slope next to a wall to start wall running!"
+  },
+  {
+   "key": "tutorial11",
+   "text": "Roll into a small gap to go through it and destroy the blocks inside!"
+  },
+  {
+   "key": "tutorial12",
+   "text": "Under a low ceiling the ball keeps moving where you hold, so you can't get stuck!"
+  },
+  {
+   "key": "tutorial13",
+   "text": "Press [D] and [J] in the air to drop straight down!"
+  },
+  {
+   "key": "tutorial14",
+   "text": "Speed is everything here! The longer you run, the faster you go, and the longer you take to stop!"
+  },
+  {
+   "key": "tutorial16",
+   "text": "To turn around at speed, press the opposite direction and skid!"
+  },
+  {
+   "key": "tutorial17",
+   "text": "Your speed carries through the air, so keep moving before you fall down a hole!"
+  },
+  {
+   "key": "tutorial18",
+   "text": "Hold [U] and press [J] to perform the Super Jump!"
+  },
+  {
+   "key": "tutorial19",
+   "text": "A Super Jump breaks everything above you on the way up! Give it a try!"
+  },
+  {
+   "key": "tutorial20",
+   "text": "Another trick: Spindash into a gap to go through it faster!"
+  },
+  {
+   "key": "tutorial21",
+   "text": "No need to grab anything: hit it as a ball and it's gone!"
+  },
+  {
+   "key": "tutorial22",
+   "text": "The ball works from any side, so jump up into things above you too!"
+  },
+  {
+   "key": "hubtips1",
+   "text": "Press [J] again in the air for your own move: Sonic's drop dash (hold it), Tails's flight, or Knuckles's glide (hold it, then climb the wall you hit)!"
+  },
+  {
+   "key": "hubtips6",
+   "text": "Did you know a spindash goes through enemy after enemy? It's the quickest way to keep your combo going."
+  },
+  {
+   "key": "hubtips7",
+   "text": "An obscure technique: Press [D] and [J] in the air at any time to slam straight down. Only useful if you want to save time!"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "sheet": "mania_sprites",
+ "note": "Sonic's animations read from the player's Data.rsdk at launch.",
+ "columns": [
+  "anim",
+  "use",
+  "source"
+ ],
+ "rows": [
+  {
+   "anim": "Idle",
+   "use": "stand",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Bored 1",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Bored 2",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Look Up",
+   "use": "up",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Crouch",
+   "use": "crouch",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Walk",
+   "use": "walk",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Jog",
+   "use": "jog",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Run",
+   "use": "run",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Dash",
+   "use": "top speed",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Jump",
+   "use": "ball",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Spring Twirl",
+   "use": "springs",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Spring Diagonal",
+   "use": "springs",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Skid",
+   "use": "skid",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Skid Turn",
+   "use": "skid end",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Spindash",
+   "use": "charge",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Dropdash",
+   "use": "drop dash",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Push",
+   "use": "push",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Hurt",
+   "use": "hurt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Die",
+   "use": "game over",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Balance 1",
+   "use": "ledge",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Balance 2",
+   "use": "ledge",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Spring CS",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Stand CS",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Fan",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Victory",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Outta Here",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Hang",
+   "use": "ladders",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Hang Move",
+   "use": "ladders",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Pole Swing V",
+   "use": "poles",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Turntable",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Twister",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Spiral Run",
+   "use": "wall run",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Shimmy Move",
+   "use": "ledge",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Breathe",
+   "use": "taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Ride",
+   "use": "rides",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Cling",
+   "use": "cling",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Transform",
+   "use": "super taunt",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  },
+  {
+   "anim": "Fly",
+   "use": "fly",
+   "source": "Data/Sprites/Players/Sonic.bin"
+  }
+ ]
+}
