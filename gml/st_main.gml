@@ -165,7 +165,7 @@ function st_sound(_name, _pitch = 1)
     var _i = audio_play_sound(_s, 5, false);
     audio_sound_gain(_i, st_sfx_gain(), 0);
     audio_sound_pitch(_i, _pitch);
-    if (variable_global_exists("st_test_on"))
+    if (variable_global_exists("st_test_on") && global.st_test_on)
     {
         var _n = ds_map_find_value(global.st_test_played, _name);
         ds_map_set(global.st_test_played, _name, (_n == undefined) ? 1 : (_n + 1));
@@ -1496,6 +1496,8 @@ function st_draw_hud()
 function st_test_load()
 {
     global.st_test_on = false;
+    global.st_test_pick = 0;
+    global.st_test_picked = -1;
     global.st_test_poses = [];
     global.st_bot = { l: 0, r: 0, d: 0, u: 0, j: 0, jh: 0, t: 0 };
     var _text = st_read_text("sonic/test.json");
@@ -2502,12 +2504,33 @@ function st_menu_draw(_x, _y)
     if (state == 0 && variable_instance_exists(id, "key_up2"))
     {
         var _pick = (key_down2 ? 1 : 0) - (key_up2 ? 1 : 0);
+        // test mode presses it too, with test mode off for the press, because that's what players run
+        var _bot_press = global.st_test_pick != 0;
+        if (_bot_press)
+        {
+            _pick = global.st_test_pick;
+            global.st_test_pick = 0;
+            global.st_test_on = false;
+        }
         if (_pick != 0)
         {
             var _count = array_length(global.st_modes);
             st_mode_set((global.st_mode + _pick + _count) mod _count);
             st_sound("Global/MenuBleep");
-            _a = st_time_anim(_n);
+            var _picked = st_time_anim(_n);
+            if (_picked == undefined)
+            {
+                _picked = st_time_anim("Idle");
+            }
+            if (_picked != undefined)
+            {
+                _a = _picked;
+            }
+        }
+        if (_bot_press)
+        {
+            global.st_test_on = true;
+            global.st_test_picked = global.st_mode;
         }
     }
     st_make_art();
@@ -2682,7 +2705,7 @@ function st_test_after_level()
             }
             if (_w > 780 || !instance_exists(obj_rank))
             {
-                global.st_sweep = ["boss_pepperman", "boss_vigilante", "boss_noise", "boss_fakepep", "boss_pizzaface", "medieval_1", "ruin_1", "dungeon_1", "badland_1", "graveyard_1", "farm_1", "saloon_1", "forest_1", "space_1", "minigolf_1", "street_1", "sewer_1", "industrial_1", "freezer_1", "chateau_1", "kidsparty_1", "war_1", "exit_1", "tower_peppinohouse"];
+                global.st_sweep = ["boss_pepperman", "boss_vigilante", "boss_noise", "boss_fakepep", "boss_pizzaface", "medieval_1", "ruin_1", "dungeon_1", "badland_1", "graveyard_1", "farm_1", "saloon_1", "forest_1", "space_1", "minigolf_1", "street_1", "sewer_1", "industrial_1", "freezer_1", "chateau_1", "kidsparty_1", "war_1", "exit_1", "tower_peppinohouse", "tower_tutorial1", "tower_tutorial3", "tower_tutorial5", "tower_tutorial7", "tower_tutorial10"];
                 global.st_sweep_i = -1;
                 st_lv("sweep_next");
             }
@@ -2745,6 +2768,10 @@ function st_test_after_level()
                 if (room == tower_peppinohouse)
                 {
                     st_log("room name: " + string(global.roommessage));
+                }
+                if (room == tower_tutorial3 && instance_exists(obj_tutorialbook))
+                {
+                    st_log("tutorial sign: " + string(obj_tutorialbook.text));
                 }
                 st_lv("sweep_next");
             }
@@ -3399,8 +3426,20 @@ function st_test_tick()
                 st_mode_set((global.st_mode + 1) mod array_length(global.st_modes), false);
                 st_log("look menu " + global.st_modes[global.st_mode].label);
             }
+            if (_w == 1600)
+            {
+                global.st_test_pick = 1;
+            }
             if (_w > 1680)
             {
+                var _want = global.st_test_picked;
+                if (_want >= 0)
+                {
+                    st_mode_set((_want + 1) mod array_length(global.st_modes), false);
+                    st_mode_load();
+                }
+                st_test_report("picker-saves-choice", _want >= 0 && global.st_mode == _want, "pressed " + string(_want) + ", read back " + string(global.st_mode));
+                file_delete("st_character.txt");
                 st_mode_set(global.st_test_mode, false);
                 st_test_report("menu-shows-sonic", global.st_menu_drawn, "not drawn");
                 var _hurt = st_h_lang_value("peppinohurt");

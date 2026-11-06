@@ -146,6 +146,7 @@
   {"name": "menu-shows-sonic", "proves": "the file select drew Sonic in Peppino's place", "melty": 0},
   {"name": "sweep-rooms", "proves": "every room on the sweep list, bosses included, opened without crashing", "melty": 0},
   {"name": "text-follows-character", "proves": "the game's words name the player's character and teach these characters' moves", "melty": 0},
+  {"name": "picker-saves-choice", "proves": "pressing the file select picker in normal play switches character, plays its sound, saves the choice and reads it back", "melty": 0},
   {"name": "air-ability", "proves": "jumping again in the air starts the character's own ability", "melty": 0}
  ]
 }
