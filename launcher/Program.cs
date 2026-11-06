@@ -357,7 +357,7 @@ namespace SonicTower
 
     static class Program
     {
-        const string Version = "1.0.9";
+        const string Version = "1.0.10";
         const string ProductFolder = "SonicTower";
 
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]

@@ -1,7 +1,7 @@
 // Generated from sheets/ by tools/preflight_and_generate.py. Change the sheet, not this file.
 function st_tables_init()
 {
-    global.st_k_acc = 0.09375;
+    global.st_k_acc = 0.125;
     global.st_k_dec = 1.0;
     global.st_k_frc = 0.09375;
     global.st_k_top = 12.0;
@@ -20,7 +20,7 @@ function st_tables_init()
     global.st_k_drop_base = 16.0;
     global.st_k_drop_max = 24.0;
     global.st_k_drop_charge = 20.0;
-    global.st_k_wall_run_speed = 10.0;
+    global.st_k_wall_run_speed = 7.0;
     global.st_k_feet_offset = 6.0;
     global.st_k_ball_offset = 8.0;
     global.st_k_sfx_mix = 0.65;
@@ -48,6 +48,14 @@ function st_tables_init()
     global.st_k_glide_acc = 0.0625;
     global.st_k_glide_fall = 1;
     global.st_k_climb_speed = 2;
+    global.st_k_boost_start = 6;
+    global.st_k_boost_acc = 0.3;
+    global.st_k_boost_top = 16;
+    global.st_k_boost_break = 10;
+    global.st_k_wall_run_up = 10;
+    global.st_k_dash_speed = 8;
+    global.st_k_land_buffer = 8;
+    global.st_k_coyote = 6;
     global.st_pound_start = "Global/DropDash";
     global.st_pound_land = "Global/Release";
     global.st_sfx = ds_map_create();
@@ -200,7 +208,7 @@ function st_tables_init()
     ds_map_set(global.st_state_anim, 3, "Idle");
     ds_map_set(global.st_state_anim, 4, "Jump");
     ds_map_set(global.st_state_anim, 5, "Jump");
-    ds_map_set(global.st_state_anim, 6, "Idle");
+    ds_map_set(global.st_state_anim, 6, "Push");
     ds_map_set(global.st_state_anim, 7, "Hurt");
     ds_map_set(global.st_state_anim, 8, "Idle");
     ds_map_set(global.st_state_anim, 9, "Jump");
@@ -236,7 +244,7 @@ function st_tables_init()
     ds_map_set(global.st_state_anim, 39, "Ride");
     ds_map_set(global.st_state_anim, 40, "Idle");
     ds_map_set(global.st_state_anim, 41, "Hurt");
-    ds_map_set(global.st_state_anim, 42, "Jump");
+    ds_map_set(global.st_state_anim, 42, "Dash");
     ds_map_set(global.st_state_anim, 43, "Jump");
     ds_map_set(global.st_state_anim, 44, "Jump");
     ds_map_set(global.st_state_anim, 45, "Jump");
@@ -272,7 +280,7 @@ function st_tables_init()
     ds_map_set(global.st_state_anim, 76, "Jump");
     ds_map_set(global.st_state_anim, 77, "Jump");
     ds_map_set(global.st_state_anim, 78, "Ride");
-    ds_map_set(global.st_state_anim, 79, "Jump");
+    ds_map_set(global.st_state_anim, 79, "Idle");
     ds_map_set(global.st_state_anim, 80, "Jump");
     ds_map_set(global.st_state_anim, 81, "Idle");
     ds_map_set(global.st_state_anim, 82, "Jump");
@@ -382,29 +390,30 @@ function st_tables_init()
     global.st_tails_lift = 8;
     global.st_tails_ball = 2;
     global.st_text = ds_map_create();
-    ds_map_set(global.st_text, "tutorial1", "Press [J] to jump! You curl into a ball that breaks blocks and defeats enemies!");
+    ds_map_set(global.st_text, "tutorial1", "Press [J] to jump! You curl into a ball that breaks blocks and defeats enemies! Hold [D] and a direction to roll into low gaps!");
     ds_map_set(global.st_text, "tutorial2", "You can break marble and metal blocks underneath you with a slam! Press [D] and [J] while in the air!");
     ds_map_set(global.st_text, "tutorial3", "The ball destroys metal blocks too, so jump into them or slam down on them!");
-    ds_map_set(global.st_text, "tutorial4", "Some blocks may be hidden, keep an eye out for them! Roll or spindash into them to destroy them!");
-    ds_map_set(global.st_text, "tutorial5", "Hold [D] and press [J] to charge a spindash! Tap [J] to rev it up, then let go of [D] to blast off! It can destroy marble blocks!");
-    ds_map_set(global.st_text, "tutorial6", "Get up to speed and run into a wall to start wall running!");
-    ds_map_set(global.st_text, "tutorial7", "Press [J] while wall running to jump off the wall!");
-    ds_map_set(global.st_text, "tutorial8", "Press [M] or hold [D] while moving to roll! Rolling down a slope builds speed fast. Try it out!");
-    ds_map_set(global.st_text, "tutorial9", "Jump while you're moving to carry your speed through the air!");
-    ds_map_set(global.st_text, "tutorial10", "At speed, you can also simply run up a slope next to a wall to start wall running!");
-    ds_map_set(global.st_text, "tutorial11", "Roll into a small gap to go through it and destroy the blocks inside!");
-    ds_map_set(global.st_text, "tutorial12", "Under a low ceiling the ball keeps moving where you hold, so you can't get stuck!");
+    ds_map_set(global.st_text, "tutorial4", "Some blocks may be hidden, keep an eye out for them! Press [G], or hit them as a ball, to destroy them!");
+    ds_map_set(global.st_text, "tutorial5", "Press [G] to do the Grab Dash! It can destroy marble blocks! A spindash works too: hold [D], tap [J], let go of [D]!");
+    ds_map_set(global.st_text, "tutorial6", "Hold [M] to boost! If you run into a wall while boosting, you will start wall running!");
+    ds_map_set(global.st_text, "tutorial7", "Press [J] while wall running to jump off the wall! Keep [M] held to stick on the other walls! Let go to drop off.");
+    ds_map_set(global.st_text, "tutorial8", "Press [G] then hold [M] for a quick start with the boost! Try it out!");
+    ds_map_set(global.st_text, "tutorial9", "You can also jump after pressing [G] in order to do a long jump!");
+    ds_map_set(global.st_text, "tutorial10", "You can also simply boost up a slope next to a wall to automatically start wall running!");
+    ds_map_set(global.st_text, "tutorial11", "While boosting, hold [D] to roll and destroy blocks in a small gap!");
+    ds_map_set(global.st_text, "tutorial12", "Release [D] and keep holding [M] to open the roll back up into a boost!");
     ds_map_set(global.st_text, "tutorial13", "Press [D] and [J] in the air to drop straight down!");
-    ds_map_set(global.st_text, "tutorial14", "Speed is everything here! The longer you run, the faster you go, and the longer you take to stop!");
-    ds_map_set(global.st_text, "tutorial16", "To turn around at speed, press the opposite direction and skid!");
-    ds_map_set(global.st_text, "tutorial17", "Your speed carries through the air, so keep moving before you fall down a hole!");
-    ds_map_set(global.st_text, "tutorial18", "Hold [U] and press [J] to perform the Super Jump!");
-    ds_map_set(global.st_text, "tutorial19", "A Super Jump breaks everything above you on the way up! Give it a try!");
-    ds_map_set(global.st_text, "tutorial20", "Another trick: Spindash into a gap to go through it faster!");
-    ds_map_set(global.st_text, "tutorial21", "No need to grab anything: hit it as a ball and it's gone!");
-    ds_map_set(global.st_text, "tutorial22", "The ball works from any side, so jump up into things above you too!");
+    ds_map_set(global.st_text, "tutorial14", "To run through metal blocks you need the speed of a long boost! Short of room? A ball breaks them at any speed.");
+    ds_map_set(global.st_text, "tutorial16", "To turn while keeping your boost, press the opposite direction and skid!");
+    ds_map_set(global.st_text, "tutorial17", "Your speed carries through the air, so try turning before you fall down a hole!");
+    ds_map_set(global.st_text, "tutorial18", "Hold [U] and press [J] to perform the Super Jump, at any speed! Let go of [U] to launch!");
+    ds_map_set(global.st_text, "tutorial19", "After starting a Super Jump, you can also dash forward in the air by pressing [G]! Give it a try!");
+    ds_map_set(global.st_text, "tutorial20", "Another trick: Press [G] then [D] immediately to go through gaps faster!");
+    ds_map_set(global.st_text, "tutorial21", "You can grab things with the Grab Dash and throw them by pressing [G] again!");
+    ds_map_set(global.st_text, "tutorial22", "If you hold [U] before throwing, you will send the things up!");
     ds_map_set(global.st_text, "hubtips1", "Press [J] again in the air for your own move: Sonic's drop dash (hold it), Tails's flight, or Knuckles's glide (hold it, then climb the wall you hit)!");
     ds_map_set(global.st_text, "hubtips6", "Did you know a spindash goes through enemy after enemy? It's the quickest way to keep your combo going.");
     ds_map_set(global.st_text, "hubtips7", "An obscure technique: Press [D] and [J] in the air at any time to slam straight down. Only useful if you want to save time!");
+    global.st_tut_route = [{ rm: "tower_tutorial1", go: "walk", x: 1200, y: 0 }, { rm: "tower_tutorial1", go: "roll", x: 1470, y: 0 }, { rm: "tower_tutorial1", go: "door", x: 1568, y: 0 }, { rm: "tower_tutorial2", go: "walk", x: 890, y: 0 }, { rm: "tower_tutorial2", go: "jump", x: 990, y: 0 }, { rm: "tower_tutorial2", go: "walk", x: 1120, y: 0 }, { rm: "tower_tutorial2", go: "walk", x: 1290, y: 0 }, { rm: "tower_tutorial2", go: "jump", x: 1430, y: 0 }, { rm: "tower_tutorial2", go: "walk", x: 1930, y: 0 }, { rm: "tower_tutorial2", go: "roll", x: 2040, y: 0 }, { rm: "tower_tutorial2", go: "door", x: 2272, y: 0 }, { rm: "tower_tutorial3", go: "dash", x: 700, y: 0 }, { rm: "tower_tutorial3", go: "roll", x: 1020, y: 0 }, { rm: "tower_tutorial3", go: "dashy", x: 1, y: 900 }, { rm: "tower_tutorial3", go: "walk", x: 1990, y: 0 }, { rm: "tower_tutorial3", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial3", go: "dash", x: 2300, y: 0 }, { rm: "tower_tutorial3", go: "wj", x: -1, y: 860 }, { rm: "tower_tutorial3", go: "wj", x: 1, y: 590 }, { rm: "tower_tutorial3", go: "air", x: 2360, y: 0 }, { rm: "tower_tutorial3", go: "door", x: 2496, y: 0 }, { rm: "tower_tutorial4", go: "walk", x: 1250, y: 0 }, { rm: "tower_tutorial4", go: "roll", x: 1530, y: 0 }, { rm: "tower_tutorial4", go: "walk", x: 2110, y: 0 }, { rm: "tower_tutorial4", go: "stop", x: 2110, y: 0 }, { rm: "tower_tutorial4", go: "sj", x: 0, y: 0 }, { rm: "tower_tutorial4", go: "air", x: 2260, y: 0 }, { rm: "tower_tutorial4", go: "dash", x: 3300, y: 0 }, { rm: "tower_tutorial4", go: "dashy", x: 1, y: 500 }, { rm: "tower_tutorial4", go: "door", x: 3488, y: 0 }, { rm: "tower_tutorial5", go: "dash", x: 900, y: 0 }, { rm: "tower_tutorial5", go: "roll", x: 1320, y: 0 }, { rm: "tower_tutorial5", go: "dash", x: 1800, y: 0 }, { rm: "tower_tutorial5", go: "roll", x: 2100, y: 0 }, { rm: "tower_tutorial5", go: "dash", x: 2850, y: 0 }, { rm: "tower_tutorial5", go: "roll", x: 3150, y: 0 }, { rm: "tower_tutorial5", go: "dash", x: 4000, y: 0 }, { rm: "tower_tutorial5", go: "roll", x: 4300, y: 0 }, { rm: "tower_tutorial5", go: "dashy", x: 1, y: 1140 }, { rm: "tower_tutorial5", go: "walk", x: 5200, y: 0 }, { rm: "tower_tutorial5", go: "dash", x: 5260, y: 0 }, { rm: "tower_tutorial5", go: "roll", x: 5570, y: 0 }, { rm: "tower_tutorial5", go: "door", x: 5728, y: 0 }, { rm: "tower_tutorial6", go: "dash", x: 3300, y: 0 }, { rm: "tower_tutorial6", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial6", go: "spin", x: 1, y: 3720 }, { rm: "tower_tutorial6", go: "door", x: 3744, y: 0 }, { rm: "tower_tutorial7", go: "spin", x: -1, y: 900 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "walk", x: 1360, y: 0 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "spin", x: -1, y: 790 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "spin", x: 1, y: 1360 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "spin", x: -1, y: 790 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "spin", x: 1, y: 1500 }, { rm: "tower_tutorial7", go: "dash", x: 2100, y: 0 }, { rm: "tower_tutorial7", go: "stop", x: 2192, y: 0 }, { rm: "tower_tutorial7", go: "sj", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial7", go: "door", x: 2144, y: 0 }, { rm: "tower_tutorial8", go: "dash", x: 1250, y: 0 }, { rm: "tower_tutorial8", go: "stop", x: 1264, y: 0 }, { rm: "tower_tutorial8", go: "sj", x: 0, y: 0 }, { rm: "tower_tutorial8", go: "air", x: 1400, y: 0 }, { rm: "tower_tutorial8", go: "dash", x: 2200, y: 0 }, { rm: "tower_tutorial8", go: "roll", x: 2500, y: 0 }, { rm: "tower_tutorial8", go: "dash", x: 3420, y: 0 }, { rm: "tower_tutorial8", go: "fall", x: 0, y: 0 }, { rm: "tower_tutorial8", go: "door", x: 3040, y: 0 }, { rm: "tower_tutorial9", go: "seek", x: 0, y: 0 }, { rm: "tower_tutorial9", go: "carry", x: 1090, y: 0 }, { rm: "tower_tutorial9", go: "throw", x: 0, y: 0 }, { rm: "tower_tutorial9", go: "wait", x: 70, y: 0 }, { rm: "tower_tutorial9", go: "target", x: 1, y: 0 }, { rm: "tower_tutorial9", go: "walk", x: 1700, y: 0 }, { rm: "tower_tutorial9", go: "seek", x: 0, y: 0 }, { rm: "tower_tutorial9", go: "carry", x: 1806, y: 0 }, { rm: "tower_tutorial9", go: "throw", x: 1, y: 0 }, { rm: "tower_tutorial9", go: "wait", x: 90, y: 0 }, { rm: "tower_tutorial9", go: "target", x: 0, y: 6 }, { rm: "tower_tutorial9", go: "door", x: 2144, y: 0 }, { rm: "tower_tutorial10", go: "dashp", x: 1, y: 0 }, { rm: "tower_tutorial10", go: "dash", x: 2520, y: 0 }, { rm: "tower_tutorial10", go: "roll", x: 2330, y: 0 }, { rm: "tower_tutorial10", go: "dash", x: 700, y: 0 }, { rm: "tower_tutorial10", go: "box", x: 432, y: 0 }, { rm: "tower_tutorial1E", go: "gate", x: 672, y: 0 }];
     global.st_sound_files = ["Global/Charge", "Global/Destroy", "Global/DropDash", "Global/FireDash", "Global/FireShield", "Global/Flying", "Global/Grab", "Global/Hurt", "Global/HyperRing", "Global/InstaShield", "Global/Jump", "Global/LoseRings", "Global/MenuAccept", "Global/MenuBleep", "Global/MenuWoosh", "Global/Release", "Global/Ring", "Global/Roll", "Global/ScoreAdd", "Global/ScoreTotal", "Global/SignPost", "Global/Skidding", "Global/SpecialRing", "Global/SpecialWarp", "Global/Spring", "Global/Starpost", "Global/Teleport", "Global/Tired", "Global/Twinkle", "Global/Warp", "Stage/Beep", "Stage/BossHit", "Stage/Button", "Stage/Clack", "Stage/Explosion2", "Stage/Impact2", "Stage/Impact3", "Stage/Impact4", "Stage/LedgeBreak", "Stage/LedgeBreak3", "Stage/Rumble", "Stage/Splash", "Stage/Transform", "Stage/Warning"];
 }

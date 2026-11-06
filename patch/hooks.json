@@ -134,5 +134,9 @@
  {
   "original": "lang_get_value_newline",
   "wrapper": "st_h_lang_newline"
+ },
+ {
+  "original": "scr_getinput",
+  "wrapper": "st_h_getinput"
  }
 ]

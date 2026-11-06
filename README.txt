@@ -8,13 +8,16 @@ If you have ReShade in your Pizza Tower folder, it doesn't load while you play S
 
 Controls use your Pizza Tower buttons:
 - Left/right: run, with Sonic Mania's momentum
-- Jump: jump as a ball that breaks blocks and kills enemies
+- Jump: jump as a ball that breaks blocks and kills enemies. A jump pressed just before landing or just after leaving a ledge still counts
+- Mach Run button, held: boost. Quick to full speed, and at speed Sonic breaks blocks and kills enemies by running into them
+- Grab button: Pizza Tower's Grab Dash. It breaks marble and grabs enemies. Press it again to throw (hold up to throw upward), jump during it for a long jump, down during it to slide
+- Up + grab: uppercut
 - Down + jump: spindash. Tap jump to rev, let go of down to release
-- Down while moving, or dash: roll
+- Down while moving: roll. Down and a direction from a standstill: crawl into low gaps
 - Hold jump in the air after a jump: drop dash on landing
-- Up + jump: super jump
+- Up + jump, at any speed: super jump. Let go of up to launch
 - Down + jump in the air: slam down through floors, with the drop dash's sounds
-- Run into a wall at speed: run up it
+- Run into a wall at speed while holding toward it, or boost into it: run up it. Jump to leap off, let go to drop
 - Taunt: Sonic strikes a different pose each time, with Pizza Tower's taunt and parry timing
 - Up at a door or gate: walk in. Down on a pizza box: go through it
 

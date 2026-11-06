@@ -8,7 +8,7 @@
  "rows": [
   {
    "key": "tutorial1",
-   "text": "Press [J] to jump! You curl into a ball that breaks blocks and defeats enemies!"
+   "text": "Press [J] to jump! You curl into a ball that breaks blocks and defeats enemies! Hold [D] and a direction to roll into low gaps!"
   },
   {
    "key": "tutorial2",
@@ -20,39 +20,39 @@
   },
   {
    "key": "tutorial4",
-   "text": "Some blocks may be hidden, keep an eye out for them! Roll or spindash into them to destroy them!"
+   "text": "Some blocks may be hidden, keep an eye out for them! Press [G], or hit them as a ball, to destroy them!"
   },
   {
    "key": "tutorial5",
-   "text": "Hold [D] and press [J] to charge a spindash! Tap [J] to rev it up, then let go of [D] to blast off! It can destroy marble blocks!"
+   "text": "Press [G] to do the Grab Dash! It can destroy marble blocks! A spindash works too: hold [D], tap [J], let go of [D]!"
   },
   {
    "key": "tutorial6",
-   "text": "Get up to speed and run into a wall to start wall running!"
+   "text": "Hold [M] to boost! If you run into a wall while boosting, you will start wall running!"
   },
   {
    "key": "tutorial7",
-   "text": "Press [J] while wall running to jump off the wall!"
+   "text": "Press [J] while wall running to jump off the wall! Keep [M] held to stick on the other walls! Let go to drop off."
   },
   {
    "key": "tutorial8",
-   "text": "Press [M] or hold [D] while moving to roll! Rolling down a slope builds speed fast. Try it out!"
+   "text": "Press [G] then hold [M] for a quick start with the boost! Try it out!"
   },
   {
    "key": "tutorial9",
-   "text": "Jump while you're moving to carry your speed through the air!"
+   "text": "You can also jump after pressing [G] in order to do a long jump!"
   },
   {
    "key": "tutorial10",
-   "text": "At speed, you can also simply run up a slope next to a wall to start wall running!"
+   "text": "You can also simply boost up a slope next to a wall to automatically start wall running!"
   },
   {
    "key": "tutorial11",
-   "text": "Roll into a small gap to go through it and destroy the blocks inside!"
+   "text": "While boosting, hold [D] to roll and destroy blocks in a small gap!"
   },
   {
    "key": "tutorial12",
-   "text": "Under a low ceiling the ball keeps moving where you hold, so you can't get stuck!"
+   "text": "Release [D] and keep holding [M] to open the roll back up into a boost!"
   },
   {
    "key": "tutorial13",
@@ -60,35 +60,35 @@
   },
   {
    "key": "tutorial14",
-   "text": "Speed is everything here! The longer you run, the faster you go, and the longer you take to stop!"
+   "text": "To run through metal blocks you need the speed of a long boost! Short of room? A ball breaks them at any speed."
   },
   {
    "key": "tutorial16",
-   "text": "To turn around at speed, press the opposite direction and skid!"
+   "text": "To turn while keeping your boost, press the opposite direction and skid!"
   },
   {
    "key": "tutorial17",
-   "text": "Your speed carries through the air, so keep moving before you fall down a hole!"
+   "text": "Your speed carries through the air, so try turning before you fall down a hole!"
   },
   {
    "key": "tutorial18",
-   "text": "Hold [U] and press [J] to perform the Super Jump!"
+   "text": "Hold [U] and press [J] to perform the Super Jump, at any speed! Let go of [U] to launch!"
   },
   {
    "key": "tutorial19",
-   "text": "A Super Jump breaks everything above you on the way up! Give it a try!"
+   "text": "After starting a Super Jump, you can also dash forward in the air by pressing [G]! Give it a try!"
   },
   {
    "key": "tutorial20",
-   "text": "Another trick: Spindash into a gap to go through it faster!"
+   "text": "Another trick: Press [G] then [D] immediately to go through gaps faster!"
   },
   {
    "key": "tutorial21",
-   "text": "No need to grab anything: hit it as a ball and it's gone!"
+   "text": "You can grab things with the Grab Dash and throw them by pressing [G] again!"
   },
   {
    "key": "tutorial22",
-   "text": "The ball works from any side, so jump up into things above you too!"
+   "text": "If you hold [U] before throwing, you will send the things up!"
   },
   {
    "key": "hubtips1",

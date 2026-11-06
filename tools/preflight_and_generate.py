@@ -54,7 +54,7 @@ for r in sheets["effects"]["rows"]:
     if f'"{r["name"]}"' not in main:
         problems.append(f"effects {r['name']}: st_main.gml never plays it")
 for r in sheets["text"]["rows"]:
-    if re.findall(r"\[(?![JDUMT]\])[^\]]*\]", r["text"]):
+    if re.findall(r"\[(?![JDUMTG]\])[^\]]*\]", r["text"]):
         problems.append(f"text {r['key']}: uses a button these characters don't use")
 if sum(r["melty"] for r in sheets["test_checks"]["rows"]) > 12:
     problems.append("test_checks: Melty counts at most 12 checks")
@@ -95,6 +95,13 @@ out.append(f"    global.st_tails_ball = {_tails['ball_lift']};")
 out.append("    global.st_text = ds_map_create();")
 for r in sheets["text"]["rows"]:
     out.append(f"    ds_map_set(global.st_text, {esc(r['key'])}, {esc(r['text'])});")
+_go = {"walk", "dash", "roll", "dashy", "dashp", "jump", "air", "fall", "spin", "stop", "sj", "wj", "door", "gate", "box", "seek", "carry", "hop", "throw", "wait", "target"}
+for r in sheets["tutorial_route"]["rows"]:
+    if r["go"] not in _go:
+        print("tutorial_route: unknown step", r["go"]); sys.exit(1)
+    if f'case "{r["go"]}":' not in main:
+        print("tutorial_route: st_main.gml never handles", r["go"]); sys.exit(1)
+out.append("    global.st_tut_route = [" + ", ".join("{ rm: %s, go: %s, x: %d, y: %d }" % (esc(r["room"]), esc(r["go"]), r["x"], r["y"]) for r in sheets["tutorial_route"]["rows"]) + "];")
 out.append("    global.st_sound_files = [" + ", ".join(esc(n) for n in sorted(sfx)) + "];")
 out.append("}")
 with open(os.path.join(ROOT, "gml", "st_tables.gml"), "w", encoding="utf8", newline="\n") as f:

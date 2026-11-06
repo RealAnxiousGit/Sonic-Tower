@@ -48,7 +48,7 @@
    "state": 6,
    "script": "scr_player_finishingblow",
    "handler": "game",
-   "anim": "Idle"
+   "anim": "Push"
   },
   {
    "state": 7,
@@ -264,7 +264,7 @@
    "state": 42,
    "script": "scr_player_handstandjump",
    "handler": "game",
-   "anim": "Jump"
+   "anim": "Dash"
   },
   {
    "state": 43,
@@ -480,7 +480,7 @@
    "state": 79,
    "script": "scr_player_grab",
    "handler": "game",
-   "anim": "Jump"
+   "anim": "Idle"
   },
   {
    "state": 80,

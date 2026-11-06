@@ -9,7 +9,7 @@
  "rows": [
   {
    "name": "acc",
-   "value": 0.09375,
+   "value": 0.125,
    "mania_value": 0.046875
   },
   {
@@ -104,8 +104,8 @@
   },
   {
    "name": "wall_run_speed",
-   "value": 10.0,
-   "mania_value": "not in Mania: lets Sonic reach Pizza Tower's tall shafts"
+   "value": 7.0,
+   "mania_value": "not in Mania: the running speed that starts a wall run without the boost button"
   },
   {
    "name": "feet_offset",
@@ -157,22 +157,130 @@
    "value": 0.35,
    "mania_value": "a level gate holds the screen longer than a door's fade, so the same animation plays slower"
   },
-  {"name": "rank_zoom_ms", "value": 850, "mania_value": "how long Sonic takes to zoom up on the results screen"},
-  {"name": "rank_scale", "value": 3, "mania_value": "Sonic's size at the end of the zoom"},
-  {"name": "rank_x", "value": 225, "mania_value": "where he ends up, in the 960 by 540 screen"},
-  {"name": "rank_y", "value": 300, "mania_value": "where he ends up, in the 960 by 540 screen"},
-  {"name": "rank_p_y", "value": 300, "mania_value": "on the P rank he stands on the stage, centre screen"},
-  {"name": "menu_scale", "value": 3, "mania_value": "Sonic's size on the file select"},
-  {"name": "menu_y", "value": 36, "mania_value": "how far below the game's Peppino spot he stands, on the floor by the stool"},
-  {"name": "fly_ticks", "value": 480, "mania_value": "Tails tires after 8 seconds, as in Mania"},
-  {"name": "fly_lift", "value": 0.25, "mania_value": "each tap of jump lifts him, doubled"},
-  {"name": "fly_up", "value": 4, "mania_value": "fastest he rises, doubled"},
-  {"name": "fly_fall", "value": 0.0625, "mania_value": "how gently he sinks, doubled"},
-  {"name": "fly_down", "value": 4, "mania_value": "fastest he sinks while flying, doubled"},
-  {"name": "glide_start", "value": 8, "mania_value": "Knuckles's glide starts at 4, doubled"},
-  {"name": "glide_top", "value": 24, "mania_value": "and speeds up to 12, doubled"},
-  {"name": "glide_acc", "value": 0.0625, "mania_value": "how fast the glide gains speed, doubled"},
-  {"name": "glide_fall", "value": 1, "mania_value": "how fast the glide sinks, doubled"},
-  {"name": "climb_speed", "value": 2, "mania_value": "climbing speed, doubled"}
+  {
+   "name": "rank_zoom_ms",
+   "value": 850,
+   "mania_value": "how long Sonic takes to zoom up on the results screen"
+  },
+  {
+   "name": "rank_scale",
+   "value": 3,
+   "mania_value": "Sonic's size at the end of the zoom"
+  },
+  {
+   "name": "rank_x",
+   "value": 225,
+   "mania_value": "where he ends up, in the 960 by 540 screen"
+  },
+  {
+   "name": "rank_y",
+   "value": 300,
+   "mania_value": "where he ends up, in the 960 by 540 screen"
+  },
+  {
+   "name": "rank_p_y",
+   "value": 300,
+   "mania_value": "on the P rank he stands on the stage, centre screen"
+  },
+  {
+   "name": "menu_scale",
+   "value": 3,
+   "mania_value": "Sonic's size on the file select"
+  },
+  {
+   "name": "menu_y",
+   "value": 36,
+   "mania_value": "how far below the game's Peppino spot he stands, on the floor by the stool"
+  },
+  {
+   "name": "fly_ticks",
+   "value": 480,
+   "mania_value": "Tails tires after 8 seconds, as in Mania"
+  },
+  {
+   "name": "fly_lift",
+   "value": 0.25,
+   "mania_value": "each tap of jump lifts him, doubled"
+  },
+  {
+   "name": "fly_up",
+   "value": 4,
+   "mania_value": "fastest he rises, doubled"
+  },
+  {
+   "name": "fly_fall",
+   "value": 0.0625,
+   "mania_value": "how gently he sinks, doubled"
+  },
+  {
+   "name": "fly_down",
+   "value": 4,
+   "mania_value": "fastest he sinks while flying, doubled"
+  },
+  {
+   "name": "glide_start",
+   "value": 8,
+   "mania_value": "Knuckles's glide starts at 4, doubled"
+  },
+  {
+   "name": "glide_top",
+   "value": 24,
+   "mania_value": "and speeds up to 12, doubled"
+  },
+  {
+   "name": "glide_acc",
+   "value": 0.0625,
+   "mania_value": "how fast the glide gains speed, doubled"
+  },
+  {
+   "name": "glide_fall",
+   "value": 1,
+   "mania_value": "how fast the glide sinks, doubled"
+  },
+  {
+   "name": "climb_speed",
+   "value": 2,
+   "mania_value": "climbing speed, doubled"
+  },
+  {
+   "name": "boost_start",
+   "value": 6,
+   "mania_value": "not in Mania: Pizza Tower's Mach Run starts at this speed the moment the button is held"
+  },
+  {
+   "name": "boost_acc",
+   "value": 0.3,
+   "mania_value": "not in Mania: speed gained per tick while boosting, so a short run-up is enough"
+  },
+  {
+   "name": "boost_top",
+   "value": 16,
+   "mania_value": "not in Mania: top speed while boosting, Mach 3's range"
+  },
+  {
+   "name": "boost_break",
+   "value": 10,
+   "mania_value": "not in Mania: from this boosting speed Sonic breaks blocks and defeats enemies by running into them"
+  },
+  {
+   "name": "wall_run_up",
+   "value": 10,
+   "mania_value": "not in Mania: the slowest a wall run climbs, so short run-ups still clear tall walls"
+  },
+  {
+   "name": "dash_speed",
+   "value": 8,
+   "mania_value": "not in Mania: Pizza Tower's Grab Dash starting speed"
+  },
+  {
+   "name": "land_buffer",
+   "value": 8,
+   "mania_value": "not in Mania: a jump pressed this many ticks before landing still happens"
+  },
+  {
+   "name": "coyote",
+   "value": 6,
+   "mania_value": "not in Mania: a jump pressed this many ticks after running off a ledge still happens"
+  }
  ]
 }

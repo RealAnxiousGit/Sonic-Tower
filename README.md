@@ -21,7 +21,8 @@ Play through Pizza Tower's levels with Sonic Mania's momentum, spindash into eve
 - **Pizza Tower's game around it:** combos, ranks, Pizza Time, secrets, bosses and music all stay.
 - **Rings:** you collect them through the level and they scatter when you're hit.
 - **The character replaces Peppino** on the file select, the TV, the results screen (every rank, with a victory pose and a camera move), the boss VS art and in the game's words.
-- **The tutorial signs and hub tips teach these moves** instead of the Grab Dash and Mach Run (English only).
+- **Pizza Tower's own moves are here too:** Mach Run as a boost, Grab Dash, throwing, uppercut, long jump, wall runs and wall jumps, super jump.
+- **The tutorial signs and hub tips teach these moves** (English only).
 - **Separate saves,** so your Pizza Tower saves are left alone.
 
 ### Controls
@@ -31,13 +32,18 @@ These use your Pizza Tower buttons.
 | Button | Move |
 |---|---|
 | Left / right | Run, with Mania's momentum |
-| Jump | Jump as a ball that breaks blocks and defeats enemies |
+| Jump | Jump as a ball that breaks blocks and defeats enemies. Still counts just before landing or just after leaving a ledge |
+| Mach Run button, held | Boost: quick to full speed, and at speed Sonic breaks blocks and defeats enemies by running into them |
+| Grab button | Grab Dash: breaks marble and grabs enemies. Jump during it for a long jump, down during it to slide |
+| Grab button while carrying | Throw. Hold up to throw upward |
+| Up + grab button | Uppercut |
 | Down + jump | Spindash: tap jump to rev, let go of down to release |
-| Down while moving, or dash | Roll |
+| Down while moving | Roll |
+| Down + a direction from a standstill | Crawl into low gaps |
 | Jump again in the air | Sonic: hold for a drop dash. Tails: tap to fly. Knuckles: hold to glide, hit a wall to climb |
-| Up + jump | Super jump |
+| Up + jump, at any speed | Super jump: let go of up to launch |
 | Down + jump in the air | Slam down through floors |
-| Run into a wall at speed | Run up it |
+| Run into a wall at speed, or boost into it | Run up it. Jump to leap off, let go to drop |
 | Taunt | A different pose each time, with Pizza Tower's taunt and parry timing |
 | Up at a door or gate | Walk in |
 
@@ -45,6 +51,7 @@ These use your Pizza Tower buttons.
 
 - Cutscenes drawn as pictures still show Peppino.
 - Transformations use general poses rather than new art.
+- The Grab Dash, carrying and throwing also use general poses, since Mania has no art for them.
 - The frame rate isn't a locked 60. Tests hold 56 to 61 in most rooms, with some dips and short hitches right after a room loads.
 - It's only been played through by a test bot and one person, so expect some bugs. Damage to the Pepperman, Vigilante and Pizzaface bosses hasn't been confirmed by the bot.
 - Song titles in the sound test keep their real names, such as "Peppino's Sauce Machine".

@@ -422,6 +422,7 @@ function st_player_init()
     st_kills_seen = global.hit;
     st_skid = false;
     st_draw_angle = 0;
+    st_coyote = 0;
 }
 
 function st_low_ceiling()
@@ -453,6 +454,7 @@ function st_start_jump()
     st_ball = true;
     st_air = true;
     st_drop = 0;
+    st_coyote = 0;
     grounded = false;
     st_sound("Global/Jump");
 }
@@ -460,10 +462,6 @@ function st_start_jump()
 function st_sonic()
 {
     st_player_init();
-    if (global.st_test_on)
-    {
-        st_test_input();
-    }
     // the game handed Sonic over from one of its own states: keep the speed it gave him
     if (!st_was_own && st_prev_state != 61 && st_prev_state != 84)
     {
@@ -481,14 +479,54 @@ function st_sonic()
         st_jumped = false;
     }
     var _mv = key_left + key_right;
+    // holding the Mach Run button runs on its own, the way Pizza Tower's does
+    if (key_attack && _mv == 0 && !st_spin && !st_fly && st_glide == 0 && !st_climb && !key_down)
+    {
+        _mv = xscale;
+    }
     if (key_jump)
     {
         input_buffer_jump = 15;
     }
-    var _jump = key_jump || (grounded && input_buffer_jump > 0 && !st_was_own);
+    // a jump pressed just before landing still counts
+    var _jump = key_jump || (grounded && input_buffer_jump > (15 - global.st_k_land_buffer));
     st_read_slope();
     var _on_ground = grounded && vsp >= 0;
     var _sin = dsin(st_slope_angle) * st_slope_dir;
+
+    // the Grab Dash and the uppercut are the game's own, and hand back to Sonic with their speed
+    if (input_buffer_slap > 0 && !st_spin && !st_climb && st_glide != 1)
+    {
+        input_buffer_slap = 0;
+        if (_mv != 0)
+        {
+            xscale = _mv;
+        }
+        var _carry = (sign(st_gsp) == xscale) ? abs(st_gsp) : 0;
+        st_ball = false;
+        st_fly = false;
+        st_drop = 0;
+        st_gsp = 0;
+        image_index = 0;
+        st_sound("Global/InstaShield");
+        if (key_up)
+        {
+            sprite_index = spr_breakdanceuppercut;
+            state = 80;
+            vsp = _on_ground ? -14 : -10;
+            movespeed = xscale * _carry;
+        }
+        else
+        {
+            sprite_index = _on_ground ? spr_suplexdash : spr_suplexdashjumpstart;
+            suplexmove = true;
+            state = 42;
+            movespeed = max(_carry, _on_ground ? global.st_k_dash_speed : 5);
+        }
+        st_was_own = true;
+        st_prev_state = 0;
+        exit;
+    }
 
     if (_on_ground)
     {
@@ -510,6 +548,8 @@ function st_sonic()
                 st_ball = true;
                 st_sound("Global/Release");
                 st_fx_add("@DropDust", x, y + 46, _dir, 0, 0);
+                input_buffer_jump = 0;
+                _jump = false;
             }
             else if (!key_down)
             {
@@ -517,10 +557,32 @@ function st_sonic()
             }
             st_drop = 0;
         }
+        st_coyote = global.st_k_coyote;
+        // Pizza Tower's super jump: at any speed, also out of a roll
+        if (!st_spin && ((_jump && key_up) || key_superjump) && !st_low_ceiling())
+        {
+            input_buffer_jump = 0;
+            if (st_gsp != 0)
+            {
+                xscale = sign(st_gsp);
+            }
+            movespeed = abs(st_gsp);
+            st_gsp = 0;
+            st_ball = false;
+            sprite_index = spr_superjumpprep;
+            image_index = 0;
+            state = 99;
+            st_sound("Global/Flying");
+            st_was_own = true;
+            st_prev_state = 0;
+            exit;
+        }
         if (st_spin)
         {
             st_gsp = 0;
             st_rev -= st_rev / 32;
+            _jump = false;
+            input_buffer_jump = 0;
             if (key_jump)
             {
                 st_rev = min(st_rev + 2, 8);
@@ -576,30 +638,29 @@ function st_sonic()
                     st_ball = false;
                 }
             }
-            if (_jump)
+            if (_jump && key_down && abs(st_gsp) <= (global.st_k_roll_start * 2))
+            {
+                input_buffer_jump = 0;
+                st_spin = true;
+                st_ball = false;
+                st_rev = 0;
+                st_gsp = 0;
+                st_sound("Global/Charge");
+            }
+            else if (_jump)
             {
                 input_buffer_jump = 0;
                 st_start_jump();
+            }
+            else if (key_attack && !key_down && !st_low_ceiling())
+            {
+                st_ball = false;
             }
         }
         else
         {
             st_skid = false;
-            if (_jump && key_up && abs(st_gsp) < 2)
-            {
-                // Pizza Tower's super jump, reaching the same places
-                input_buffer_jump = 0;
-                st_gsp = 0;
-                sprite_index = spr_superjumpprep;
-                image_index = 0;
-                hsp = 0;
-                state = 99;
-                st_sound("Global/Flying");
-                st_was_own = true;
-                st_prev_state = 0;
-                exit;
-            }
-            else if (_jump && key_down && abs(st_gsp) < global.st_k_roll_start)
+            if (_jump && key_down && abs(st_gsp) < global.st_k_roll_start)
             {
                 input_buffer_jump = 0;
                 st_spin = true;
@@ -612,13 +673,25 @@ function st_sonic()
                 input_buffer_jump = 0;
                 st_start_jump();
             }
-            else if ((key_down || key_attack2) && abs(st_gsp) >= global.st_k_roll_start)
+            else if (key_down && abs(st_gsp) >= global.st_k_roll_start)
             {
+                st_ball = true;
+                st_sound("Global/Roll");
+            }
+            else if (key_down && _mv != 0)
+            {
+                // crawling: down and a direction curls up and goes, so low gaps need no run-up
+                xscale = _mv;
+                st_gsp = _mv * global.st_k_roll_start;
                 st_ball = true;
                 st_sound("Global/Roll");
             }
             else
             {
+                if (key_attack2)
+                {
+                    st_sound("Global/Release");
+                }
                 if (_mv != 0)
                 {
                     if (st_gsp != 0 && sign(st_gsp) != _mv)
@@ -637,12 +710,25 @@ function st_sonic()
                             st_gsp = _mv * global.st_k_dec;
                         }
                     }
-                    else if (abs(st_gsp) < global.st_k_top)
+                    else
                     {
-                        st_gsp += _mv * global.st_k_acc;
-                        if (abs(st_gsp) > global.st_k_top)
+                        var _top = key_attack ? global.st_k_boost_top : global.st_k_top;
+                        var _acc = key_attack ? global.st_k_boost_acc : global.st_k_acc;
+                        if (key_attack && abs(st_gsp) < global.st_k_boost_start)
                         {
-                            st_gsp = _mv * global.st_k_top;
+                            st_gsp = _mv * global.st_k_boost_start;
+                        }
+                        else if (abs(st_gsp) < _top)
+                        {
+                            st_gsp += _mv * _acc;
+                            if (abs(st_gsp) > _top)
+                            {
+                                st_gsp = _mv * _top;
+                            }
+                        }
+                        if (key_attack && (global.st_tick mod 6) == 0)
+                        {
+                            st_fx_add("@Dust", x - (_mv * 16), y + 40, _mv, -_mv, -1);
                         }
                     }
                     xscale = _mv;
@@ -653,21 +739,6 @@ function st_sonic()
                     st_gsp -= _s * min(global.st_k_frc, abs(st_gsp));
                 }
                 st_gsp -= global.st_k_slope * _sin;
-                // running up a wall: Pizza Tower's climb, at Sonic's speed
-                var _dirw = sign(st_gsp);
-                if (abs(st_gsp) >= global.st_k_wall_run_speed && _mv == _dirw && scr_solid(x + _dirw, y) && !place_meeting(x + _dirw, y, obj_slope) && !place_meeting(x + _dirw, y, obj_destructibles))
-                {
-                    wallspeed = abs(st_gsp);
-                    grabclimbbuffer = 9999;
-                    xscale = _dirw;
-                    vsp = -wallspeed;
-                    state = 37;
-                    sprite_index = spr_machclimbwall;
-                    st_sound("Global/Roll");
-                    st_was_own = true;
-                    st_prev_state = 0;
-                    exit;
-                }
             }
         }
         if (st_low_ceiling() && !st_spin && !st_ball)
@@ -687,9 +758,19 @@ function st_sonic()
         {
             vsp = -global.st_k_jump_cut;
         }
+        if (st_coyote > 0)
+        {
+            st_coyote--;
+            if (key_jump && !key_down && !st_jumped && vsp >= 0)
+            {
+                // just off a ledge: the jump still counts
+                input_buffer_jump = 0;
+                st_start_jump();
+            }
+        }
         if (_mv != 0)
         {
-            if (sign(st_gsp) != _mv || abs(st_gsp) < global.st_k_top)
+            if (sign(st_gsp) != _mv || abs(st_gsp) < (key_attack ? global.st_k_boost_top : global.st_k_top))
             {
                 st_gsp += _mv * global.st_k_air_acc;
             }
@@ -699,7 +780,7 @@ function st_sonic()
         {
             st_gsp -= st_gsp / 32;
         }
-        if (key_jump && key_down && !st_climb)
+        if (((key_jump && key_down) || key_groundpound2) && !st_climb)
         {
             // Pizza Tower's body slam, for floors that need it
             image_index = 0;
@@ -707,6 +788,7 @@ function st_sonic()
             state = 108;
             vsp = -5;
             st_ball = true;
+            input_buffer_jump = 0;
             st_sound(global.st_pound_start);
             st_was_own = true;
             st_prev_state = 0;
@@ -714,20 +796,6 @@ function st_sonic()
         }
         // jump again in the air
         st_air_ability(_mv);
-        // a wall reached in the air at speed
-        var _dira = sign(st_gsp);
-        if (!st_ball && !st_fly && st_glide == 0 && !st_climb && abs(st_gsp) >= global.st_k_wall_run_speed && _mv == _dira && scr_solid(x + _dira, y) && !place_meeting(x + _dira, y, obj_slope) && !place_meeting(x + _dira, y, obj_destructibles))
-        {
-            wallspeed = abs(st_gsp);
-            grabclimbbuffer = 9999;
-            xscale = _dira;
-            vsp = -wallspeed;
-            state = 37;
-            sprite_index = spr_machclimbwall;
-            st_was_own = true;
-            st_prev_state = 0;
-            exit;
-        }
     }
 
     if (_on_ground)
@@ -785,6 +853,10 @@ function st_sonic()
             st_anim("Jump", min(240, 60 + (_abs * 12)));
         }
     }
+    else if (key_attack && _abs >= global.st_k_boost_break)
+    {
+        st_anim("Dash", 256);
+    }
     else if (!_now_ground)
     {
         st_run_anim(_abs);
@@ -828,6 +900,41 @@ function st_sonic()
     // taunting: the game's own, with its timing and parry
     st_was_own = true;
     scr_dotaunt();
+}
+
+// running into a wall at speed starts Pizza Tower's climb, from a run, a jump or a roll
+function st_try_wall_run(_dir)
+{
+    if (st_spin || st_fly || st_glide != 0 || st_climb || key_down)
+    {
+        return false;
+    }
+    if (!key_attack && ((key_left + key_right) != _dir || abs(st_gsp) < global.st_k_wall_run_speed))
+    {
+        return false;
+    }
+    if (!scr_solid(x + _dir, y - 20) || place_meeting(x + _dir, y - 20, obj_slope) || place_meeting(x + _dir, y, obj_destructibles) || st_low_ceiling())
+    {
+        return false;
+    }
+    wallspeed = max(abs(st_gsp), global.st_k_wall_run_up);
+    grabclimbbuffer = 9999;
+    xscale = _dir;
+    vsp = -wallspeed;
+    hsp = 0;
+    st_gsp = 0;
+    st_ball = false;
+    st_drop = 0;
+    st_jumped = false;
+    mask_index = spr_player_mask;
+    state = 37;
+    sprite_index = spr_machclimbwall;
+    st_sound("Global/Roll");
+    if (global.st_test_on)
+    {
+        global.st_test_wallrun = true;
+    }
+    return true;
 }
 
 // breaks and kills on contact while Sonic is a ball: every breakable the game has
@@ -1046,7 +1153,7 @@ function st_game_state_anim()
 
 function st_contact_hurt()
 {
-    if (st_ball || st_spin || (state != 0 && state != 92) || hurted || invhurt_buffer > 0)
+    if (st_ball || st_spin || (state != 0 && state != 92) || hurted || invhurt_buffer > 0 || (key_attack && abs(st_gsp) >= global.st_k_boost_break))
     {
         return;
     }
@@ -1082,12 +1189,18 @@ function st_h_collide()
     }
     st_player_init();
     var _own = (state == 0 || state == 92 || state == 65);
-    if (_own && st_was_own && (st_ball || st_spin || st_glide == 1))
+    // a wall run lasts while the player holds toward the wall or holds the Mach Run button
+    if (state == 37)
+    {
+        grabclimbbuffer = (key_attack || (key_left + key_right) == xscale) ? 9999 : 0;
+    }
+    var _fast = _own && st_was_own && key_attack && abs(st_gsp) >= global.st_k_boost_break;
+    if (_own && st_was_own && (st_ball || st_spin || st_glide == 1 || _fast))
     {
         instakillmove = true;
         attacking = true;
     }
-    if (st_was_own && st_ball && _own)
+    if (st_was_own && (st_ball || _fast) && _own)
     {
         st_ball_hits();
     }
@@ -1097,7 +1210,10 @@ function st_h_collide()
     {
         if (hsp == 0 && st_gsp != 0 && scr_solid(x + sign(st_gsp), y))
         {
-            st_gsp = 0;
+            if (!st_try_wall_run(sign(st_gsp)))
+            {
+                st_gsp = 0;
+            }
         }
         // Mania's ground hold: running down a slope doesn't turn into a fall
         if (_was_ground && !grounded && vsp >= 0 && !st_jumped)
@@ -1499,7 +1615,7 @@ function st_test_load()
     global.st_test_pick = 0;
     global.st_test_picked = -1;
     global.st_test_poses = [];
-    global.st_bot = { l: 0, r: 0, d: 0, u: 0, j: 0, jh: 0, t: 0 };
+    global.st_bot = { l: 0, r: 0, d: 0, u: 0, j: 0, jh: 0, t: 0, m: 0, g: 0, pd: 0, pu: 0, pm: 0, pg: 0 };
     var _text = st_read_text("sonic/test.json");
     if (_text == "")
     {
@@ -3096,15 +3212,581 @@ function st_test_input()
     var _b = global.st_bot;
     key_left = -_b.l;
     key_right = _b.r;
+    key_down2 = _b.d && !_b.pd;
+    key_up2 = _b.u && !_b.pu;
     key_down = _b.d;
     key_up = _b.u;
     key_jump = _b.j;
     key_jump2 = _b.jh;
     key_taunt2 = _b.t;
-    key_attack = 0;
-    key_attack2 = 0;
+    key_attack = _b.m;
+    key_attack2 = _b.m && !_b.pm;
+    key_slap = _b.g;
+    key_slap2 = _b.g && !_b.pg;
+    key_superjump = 0;
+    key_groundpound = 0;
+    key_groundpound2 = 0;
+    _b.pd = _b.d;
+    _b.pu = _b.u;
+    _b.pm = _b.m;
+    _b.pg = _b.g;
     _b.j = 0;
     _b.t = 0;
+}
+
+// test mode presses a player's buttons, so every state of the game sees them the same way
+function st_h_getinput()
+{
+    scr_getinput();
+    if (variable_global_exists("st_test_on") && global.st_test_on && object_index == obj_player1 && variable_global_exists("st_bot"))
+    {
+        st_test_input();
+    }
+}
+
+// ---- the tutorial, played from start to end with a player's buttons (sheets/tutorial_route.json)
+
+function st_tut_begin()
+{
+    global.st_tr = { key: "", rows: [], i: 0, t: 0, room_t: 0, sub: 0, dir: 1, stuck: 0, jhold: 0, lastx: 0, failed: "", cleared: 0, done_t: 0, boost: false, throw_seen: false, live: true, total: 0 };
+    global.st_test_wallrun = false;
+    global.collect = 0;
+    global.startgate = true;
+    global.leveltosave = "entrance";
+    global.leveltorestart = tower_tutorial1;
+    global.levelattempts = 0;
+    with (obj_player)
+    {
+        backtohubstartx = x;
+        backtohubstarty = y;
+        backtohubroom = tower_entrancehall;
+        targetRoom = tower_tutorial1;
+        targetDoor = "A";
+        visible = true;
+    }
+    with (obj_player1)
+    {
+        instance_create(x, y, obj_fadeout);
+    }
+    st_log("tutorial route starts");
+    global.st_test_phase = 20;
+    global.st_test_wait = 0;
+}
+
+function st_tut_next(_tr)
+{
+    _tr.i++;
+    _tr.t = 0;
+    _tr.sub = 0;
+    _tr.stuck = 0;
+    _tr.dir = 0;
+}
+
+function st_tut_hold(_dir)
+{
+    var _b = global.st_bot;
+    _b.l = (_dir < 0);
+    _b.r = (_dir > 0);
+}
+
+// steers to a spot and slows down there
+function st_tut_steer(_tx, _p)
+{
+    var _dx = _tx - _p.x;
+    var _v = _p.st_gsp;
+    if (abs(_dx) < 14 && abs(_v) < 1.5)
+    {
+        return true;
+    }
+    if (abs(_v) > max(1.5, abs(_dx) / 10))
+    {
+        st_tut_hold(-sign(_v));
+    }
+    else if (abs(_dx) >= 14)
+    {
+        st_tut_hold(sign(_dx));
+    }
+    return false;
+}
+
+function st_tut_finish(_tr)
+{
+    _tr.live = false;
+    _tr.done_t = 0;
+    st_test_clear_keys();
+    st_test_report("tutorial-cleared", _tr.failed == "", (_tr.failed == "") ? ("all rooms by door in " + string(_tr.total) + " ticks") : ("stuck in:" + _tr.failed));
+    st_test_report("wall-run-starts", global.st_test_wallrun, "");
+    st_test_report("boost-speeds-up", _tr.boost, "");
+    st_test_report("grab-dash-throws", _tr.throw_seen, "");
+}
+
+function st_tut_tick()
+{
+    var _b = global.st_bot;
+    var _tr = global.st_tr;
+    var _p = obj_player1;
+    if (!instance_exists(_p))
+    {
+        return;
+    }
+    with (obj_player1)
+    {
+        st_player_init();
+    }
+    st_test_clear_keys();
+    if (!_tr.live)
+    {
+        // the results screen, back to the tower, on with the rest of the test
+        _tr.done_t++;
+        if (_tr.done_t == 30)
+        {
+            with (obj_rank)
+            {
+                alarm[2] = 1;
+            }
+        }
+        if (_tr.done_t > 1500 || (_tr.done_t > 120 && !instance_exists(obj_rank) && !instance_exists(obj_endlevelfade) && !instance_exists(obj_fadeout) && string_pos("tutorial", room_get_name(room)) == 0))
+        {
+            global.panic = false;
+            global.st_test_phase = 1;
+            global.st_test_wait = 0;
+        }
+        return;
+    }
+    _tr.total++;
+    var _rn = room_get_name(room);
+    var _key = (room == tower_tutorial1 && global.panic) ? "tower_tutorial1E" : _rn;
+    // the exit gate took him: the panic is over, or the results are up
+    if (_tr.key == "tower_tutorial1E" && (!global.panic || instance_exists(obj_endlevelfade) || string_pos("tower_tutorial", _rn) == 0))
+    {
+        st_log("tutorial exit gate reached");
+        st_tut_finish(_tr);
+        return;
+    }
+    if (string_pos("tower_tutorial", _rn) == 0)
+    {
+        if (_tr.total > 900 && _tr.key != "")
+        {
+            st_log("tutorial left the rooms: in " + _rn);
+            _tr.failed += " left to " + _rn;
+            st_tut_finish(_tr);
+        }
+        return;
+    }
+    if (_key != _tr.key)
+    {
+        st_log("tutorial room " + _key + " after " + string(_tr.room_t) + " ticks");
+        if (_tr.key != "")
+        {
+            _tr.cleared++;
+        }
+        _tr.key = _key;
+        _tr.rows = [];
+        var _all = global.st_tut_route;
+        for (var i = 0; i < array_length(_all); i++)
+        {
+            if (_all[i].rm == _key)
+            {
+                array_push(_tr.rows, _all[i]);
+            }
+        }
+        _tr.i = 0;
+        _tr.t = 0;
+        _tr.sub = 0;
+        _tr.room_t = 0;
+        _tr.dir = 0;
+        _tr.stuck = 0;
+    }
+    // the file select leaves the player waiting: a door out of it would wake him
+    if (_p.state == 18)
+    {
+        with (obj_player1)
+        {
+            state = 0;
+            visible = true;
+        }
+    }
+    _tr.room_t++;
+    if (abs(_p.st_gsp) >= 12)
+    {
+        _tr.boost = _tr.boost || _p.key_attack;
+    }
+    if (_p.state == 6)
+    {
+        _tr.throw_seen = true;
+    }
+    var _own = (_p.state == 0 || _p.state == 92 || _p.state == 65);
+    if (instance_exists(obj_fadeout) || _p.state == 112 || _p.state == 98)
+    {
+        if (!(_tr.i < array_length(_tr.rows) && (_tr.rows[_tr.i].go == "door" || _tr.rows[_tr.i].go == "gate")))
+        {
+            return;
+        }
+    }
+    if ((_tr.room_t mod 120) == 0)
+    {
+        st_log("tut " + _key + " step " + string(_tr.i) + " x " + string(floor(_p.x)) + " y " + string(floor(_p.y)) + " state " + string(_p.state) + " gsp " + string(_p.st_gsp));
+    }
+    // stuck for good: note it and go on by the room's own door
+    if (_tr.room_t > 3000 || _tr.i >= array_length(_tr.rows))
+    {
+        st_log("tutorial STUCK " + _key + " step " + string(_tr.i) + " x " + string(floor(_p.x)) + " y " + string(floor(_p.y)) + " state " + string(_p.state));
+        _tr.failed += " " + _key + "#" + string(_tr.i);
+        var _door = -4;
+        for (var j = 0; j < array_length(_tr.rows); j++)
+        {
+            if (_tr.rows[j].go == "door")
+            {
+                _door = instance_nearest(_tr.rows[j].x, _p.y, obj_door);
+            }
+        }
+        if (_door == -4)
+        {
+            st_tut_finish(_tr);
+            return;
+        }
+        var _tgr = _door.targetRoom;
+        var _tgd = _door.targetDoor;
+        with (obj_player)
+        {
+            targetRoom = _tgr;
+            targetDoor = _tgd;
+            state = 92;
+            hallway = false;
+            verticalhallway = false;
+            box = false;
+        }
+        with (obj_player1)
+        {
+            instance_create(x, y, obj_fadeout);
+        }
+        _tr.room_t = 0;
+        _tr.i = 0;
+        return;
+    }
+    var _s = _tr.rows[_tr.i];
+    _tr.t++;
+    var _t = _tr.t;
+    if (_tr.jhold > 0)
+    {
+        _tr.jhold--;
+        _b.jh = 1;
+    }
+    var _go = _s.go;
+    switch (_go)
+    {
+        case "walk":
+        case "dash":
+        case "roll":
+            if (_tr.dir == 0)
+            {
+                _tr.dir = (_s.x >= _p.x) ? 1 : -1;
+            }
+            if (sign(_s.x - _p.x) != _tr.dir)
+            {
+                st_tut_next(_tr);
+                break;
+            }
+            st_tut_hold(_tr.dir);
+            _b.m = (_go == "dash");
+            _b.d = (_go == "roll");
+            if (_own && _p.grounded && abs(_p.x - _tr.lastx) < 1)
+            {
+                _tr.stuck++;
+                if (_tr.stuck >= 25)
+                {
+                    _b.d = 0;
+                    _b.j = 1;
+                    _tr.jhold = 14;
+                    _tr.stuck = 0;
+                }
+            }
+            else
+            {
+                _tr.stuck = 0;
+            }
+            break;
+        case "dashy":
+            st_tut_hold(_s.x);
+            _b.m = 1;
+            if (_p.y <= _s.y && _own)
+            {
+                st_tut_next(_tr);
+            }
+            else if (_own && _p.grounded && abs(_p.x - _tr.lastx) < 1)
+            {
+                _tr.stuck++;
+                if (_tr.stuck >= 25)
+                {
+                    _b.j = 1;
+                    _tr.jhold = 14;
+                    _tr.stuck = 0;
+                }
+            }
+            break;
+        case "dashp":
+            if (global.panic)
+            {
+                st_tut_next(_tr);
+                break;
+            }
+            st_tut_hold(_s.x);
+            _b.m = 1;
+            break;
+        case "jump":
+            if (_t == 1)
+            {
+                _b.j = 1;
+                _tr.jhold = 16;
+                _b.jh = 1;
+                _tr.dir = (_s.x >= _p.x) ? 1 : -1;
+            }
+            if (sign(_s.x - _p.x) == _tr.dir)
+            {
+                st_tut_hold(_tr.dir);
+            }
+            if (_t > 8 && _own && _p.grounded)
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "air":
+            if (_tr.dir == 0)
+            {
+                _tr.dir = (_s.x >= _p.x) ? 1 : -1;
+            }
+            if (sign(_s.x - _p.x) == _tr.dir)
+            {
+                st_tut_hold(_tr.dir);
+            }
+            if (_t > 4 && _own && _p.grounded)
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "fall":
+            if (_t > 4 && _own && _p.grounded)
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "spin":
+            // x is the way to go, y is how far
+            if (_tr.sub == 0)
+            {
+                if (_own && _p.grounded && abs(_p.st_gsp) < 1.5)
+                {
+                    _tr.sub = 1;
+                    _tr.t = 0;
+                    st_tut_hold(_s.x);
+                }
+                else if (abs(_p.st_gsp) >= 1.5)
+                {
+                    st_tut_hold(-sign(_p.st_gsp));
+                }
+            }
+            else if (_tr.sub == 1)
+            {
+                _b.d = (_t >= 2 && _t < 26);
+                if (_t == 6 || _t == 12 || _t == 18)
+                {
+                    _b.j = 1;
+                }
+                if (_t >= 26)
+                {
+                    _tr.sub = 2;
+                    _tr.t = 0;
+                }
+            }
+            else
+            {
+                st_tut_hold(_s.x);
+                if (sign(_s.y - _p.x) != _s.x || _t > 240)
+                {
+                    st_tut_next(_tr);
+                }
+            }
+            break;
+        case "stop":
+            if (st_tut_steer(_s.x, _p))
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "sj":
+            _b.u = (_t < 30);
+            if (_t == 2)
+            {
+                _b.j = 1;
+            }
+            if (_p.state == 97)
+            {
+                _tr.sub = 1;
+            }
+            if (_t > 40 && _p.state != 97 && _p.state != 99 && (_tr.sub == 1 || _t > 200))
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "wj":
+            // x is the way to leap, y is how high to run first
+            _b.m = 1;
+            st_tut_hold((_tr.sub == 0) ? -_s.x : _s.x);
+            if (_tr.sub == 0 && _p.state == 37 && _p.y <= _s.y)
+            {
+                _b.j = 1;
+                _tr.sub = 1;
+                _tr.t = 0;
+            }
+            else if (_tr.sub == 1 && _t > 2)
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "door":
+            var _d = instance_nearest(_s.x, _p.y, obj_door);
+            if (_d != -4 && st_tut_steer((_d.bbox_left + _d.bbox_right) / 2, _p) && _p.grounded)
+            {
+                _b.u = 1;
+            }
+            break;
+        case "gate":
+            _b.u = _p.grounded;
+            if (_tr.room_t > 1800)
+            {
+                _tr.failed += " gate";
+                st_tut_finish(_tr);
+            }
+            break;
+        case "box":
+            if (st_tut_steer(_s.x, _p))
+            {
+                _b.d = 1;
+            }
+            if (_own && _p.grounded && abs(_p.st_gsp) < 1 && _tr.sub > 90)
+            {
+                _b.j = 1;
+                _tr.sub = 0;
+            }
+            _tr.sub++;
+            break;
+        case "seek":
+            if (_p.state == 79)
+            {
+                st_tut_next(_tr);
+                break;
+            }
+            if (_p.state == 42)
+            {
+                break;
+            }
+            var _n = instance_nearest(_p.x, _p.y, obj_baddie);
+            if (_n != -4)
+            {
+                var _ndx = _n.x - _p.x;
+                st_tut_hold(sign(_ndx));
+                if (abs(_ndx) < 120 && abs(_n.y - _p.y) < 70 && _p.xscale == sign(_ndx) && (_t mod 8) == 1)
+                {
+                    _b.g = 1;
+                }
+            }
+            break;
+        case "carry":
+            if (_p.state != 79)
+            {
+                _tr.i--;
+                _tr.t = 0;
+                _tr.dir = 0;
+                _tr.sub = 0;
+                break;
+            }
+            if (abs(_s.x - _p.x) < 12)
+            {
+                _b.l = 0;
+                _b.r = 0;
+                if (_t > 2 && _p.grounded)
+                {
+                    st_tut_next(_tr);
+                }
+            }
+            else
+            {
+                st_tut_hold(sign(_s.x - _p.x));
+                if (_p.grounded && abs(_p.x - _tr.lastx) < 1)
+                {
+                    _tr.stuck++;
+                    if (_tr.stuck >= 12)
+                    {
+                        _b.j = 1;
+                        _tr.jhold = 14;
+                        _tr.stuck = 0;
+                    }
+                }
+            }
+            break;
+        case "hop":
+            // jumps, and throws when level with the target
+            if (_tr.sub == 0 && _p.grounded)
+            {
+                _b.j = 1;
+                _tr.jhold = 30;
+                _tr.sub = 1;
+            }
+            else if (_tr.sub == 1 && _p.y <= _s.y)
+            {
+                st_tut_hold(1);
+                _b.g = 1;
+                _tr.sub = 2;
+            }
+            else if (_tr.sub == 2 && _p.state != 79)
+            {
+                st_tut_next(_tr);
+            }
+            else if (_tr.sub == 2 && _t > 90)
+            {
+                _tr.sub = 0;
+                _tr.t = 0;
+            }
+            break;
+        case "throw":
+            _b.u = _s.x;
+            if (_p.state != 79)
+            {
+                st_tut_next(_tr);
+            }
+            else if (_t == 8)
+            {
+                _b.g = 1;
+            }
+            else if (_t > 60)
+            {
+                _tr.t = 0;
+            }
+            break;
+        case "wait":
+            if (_t > _s.x)
+            {
+                st_tut_next(_tr);
+            }
+            break;
+        case "target":
+            // x is how many targets may be left, y is the step to try again from
+            if (instance_number(obj_tutorialtarget) > _s.x)
+            {
+                st_log("tutorial target still up, again");
+                _tr.i = _s.y;
+                _tr.t = 0;
+                _tr.sub = 0;
+                _tr.dir = 0;
+            }
+            else
+            {
+                st_log("tutorial target down");
+                st_tut_next(_tr);
+            }
+            break;
+    }
+    _tr.lastx = _p.x;
 }
 
 function st_test_clear_keys()
@@ -3115,6 +3797,8 @@ function st_test_clear_keys()
     _b.d = 0;
     _b.u = 0;
     _b.jh = 0;
+    _b.m = 0;
+    _b.g = 0;
 }
 
 function st_test_hold_dir()
@@ -3156,7 +3840,15 @@ function st_test_tick()
                 global.st_test_wait = 0;
             }
             break;
+        case 20:
+            st_tut_tick();
+            break;
         case 1:
+            if (_w > 60 && obj_savesystem.state == 0 && !variable_global_exists("st_tr"))
+            {
+                st_tut_begin();
+                break;
+            }
             if (_w > 60 && obj_savesystem.state == 0)
             {
                 global.collect = 0;

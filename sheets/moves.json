@@ -40,7 +40,7 @@
   },
   {
    "move": "roll",
-   "input": "down while moving, or the dash button",
+   "input": "down while moving, or down and a direction to crawl into a low gap",
    "state": 65,
    "from": "Mania; under a low ceiling the ball keeps moving where the player holds, so Sonic can never be stuck in a crawlspace",
    "sound": "Global/Roll",
@@ -58,16 +58,16 @@
   },
   {
    "move": "wall_run",
-   "input": "run into a wall at speed",
+   "input": "run into a wall at speed holding toward it, or boost into it; jump to leap off, let go to drop",
    "state": 37,
-   "from": "Pizza Tower's wall climb, reached at Sonic's speed",
+   "from": "Pizza Tower's wall climb and wall jump, started the moment Sonic hits the wall",
    "sound": "Global/Roll",
    "breaks_and_kills": false,
    "land_sound": "none"
   },
   {
    "move": "super_jump",
-   "input": "up + jump",
+   "input": "up + jump at any speed, also from a roll; let go of up to launch",
    "state": 99,
    "from": "Pizza Tower's super jump, drawn with Sonic's spring twirl",
    "sound": "Global/Flying",
@@ -90,6 +90,42 @@
    "from": "Pizza Tower's taunt and parry timing, a different Sonic pose each time",
    "sound": "Global/Twinkle",
    "breaks_and_kills": false,
+   "land_sound": "none"
+  },
+  {
+   "move": "boost",
+   "input": "hold the Mach Run button",
+   "state": 0,
+   "from": "Pizza Tower's Mach Run on Sonic's physics: instant start, quick climb to Mach 3's range, breaks and kills at speed",
+   "sound": "Global/Release",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "grab_dash",
+   "input": "grab button",
+   "state": 42,
+   "from": "Pizza Tower's own Grab Dash: breaks marble, grabs enemies, jump for a long jump, down to slide, hold Mach Run to keep the speed",
+   "sound": "Global/InstaShield",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "throw",
+   "input": "grab button while carrying, hold up to throw upward",
+   "state": 6,
+   "from": "Pizza Tower's finishing blow: what opens the target blocks in the tutorial",
+   "sound": "Global/InstaShield",
+   "breaks_and_kills": true,
+   "land_sound": "none"
+  },
+  {
+   "move": "uppercut",
+   "input": "up + grab button",
+   "state": 80,
+   "from": "Pizza Tower's uppercut",
+   "sound": "Global/InstaShield",
+   "breaks_and_kills": true,
    "land_sound": "none"
   }
  ]
