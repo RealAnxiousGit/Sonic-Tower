@@ -99,4 +99,4 @@ Most of the mod works by swapping calls: `sheets/hooks.json` lists each game fun
 - Sonic Mania is by SEGA, Christian Whitehead, Headcannon and PagodaWest Games.
 - [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool) is by the UndertaleModTool contributors (GPL-3.0). It's a separate program that the launcher starts unchanged. See `THIRD-PARTY.txt`.
 
-Sonic Tower is an unofficial fan mod, not affiliated with any of them. The MIT license in `LICENSE` covers this repository's own code. It doesn't cover either game or their characters and art, which are their owners'.
+Sonic Tower is an unofficial fan mod, not affiliated with any of them. This repository's own code and text are all rights reserved (see `LICENSE`). That doesn't extend to either game or their characters and art, which are their owners'.
